@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-var ins = event_data[?"diffX"];
 
-hspeed += modulateInputs(ins);
 
+hspeed = 0;
+playerXInput = 0;
