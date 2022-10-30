@@ -11,3 +11,14 @@ if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(pl
 
 if (x < global.HORIZONTAL_BUFFER) x = global.HORIZONTAL_BUFFER;
 else if (x > room_width - global.HORIZONTAL_BUFFER) x = room_width - global.HORIZONTAL_BUFFER;
+
+
+if (shootCD == 0) {
+	shoot(5, 90);
+	shootCD = FIRERATE;
+}
+else {
+	shootCD = max(0, shootCD-1);
+	
+}
+

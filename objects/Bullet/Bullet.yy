@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "Bullet",
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_Bullet",
+    "path": "sprites/s_Bullet/s_Bullet.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

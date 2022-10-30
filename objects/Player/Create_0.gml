@@ -28,3 +28,12 @@ function modulateInputs (input) {
 	return -input;
 }
 
+function shoot(spd, dir) {
+	var bullet = instance_create_layer(x, y, "Instances", Bullet);
+	with (bullet) {
+		speed = spd;
+		direction = dir;
+		image_angle = dir;
+	}
+}
+
