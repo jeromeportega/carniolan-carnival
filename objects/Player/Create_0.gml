@@ -24,7 +24,7 @@ y = (global.UPPER_BOUND + global.LOWER_BOUND) /2;
 
 function modulateInputs (input) {
 	input = 2 * input/room_width;
-	input = 1.1 * max(-1, min(input, 1));
+	input = 1.2 * max(-1, min(input, 1));
 	return -input;
 }
 

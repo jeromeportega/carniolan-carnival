@@ -4,5 +4,5 @@
 
 
 
-hspeed = 0;
+
 playerXInput = 0;

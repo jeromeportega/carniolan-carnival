@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-hspeed += sign(playerXInput)*(abs(playerXInput) - .2) * maxHAccel;
+hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed;//maxHAccel;
 
 hspeed = sign(hspeed) * min(maxHSpeed, abs(hspeed));
 
@@ -14,7 +14,7 @@ else if (x > room_width - global.HORIZONTAL_BUFFER) x = room_width - global.HORI
 
 
 if (shootCD == 0) {
-	shoot(5, 90);
+	shoot(global.pace, 90);
 	shootCD = FIRERATE;
 }
 else {
