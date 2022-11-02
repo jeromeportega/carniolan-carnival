@@ -18,7 +18,7 @@ function shoot(spd, dir) {
 
 function handlePlayerShooting() {
 	if (shootCD == 0) {
-		shoot(global.pace, 90);
+		shoot(2 * global.pace, 90);
 		shootCD = FIRERATE;
 	}
 	else {

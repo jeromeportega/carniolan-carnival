@@ -26,7 +26,6 @@ function executeNormal() {
 	hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed;
 	hspeed = sign(hspeed) * min(maxHSpeed, abs(hspeed));
 	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
-	boundPlayerWithinBuffer();
 	handlePlayerShooting();
 	
 }
@@ -36,7 +35,6 @@ function executeInfected() {
 	insDebug1 = hspeed;
 	hspeed = sign(hspeed) * min(2 * maxHSpeed, abs(hspeed));
 	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
-	boundPlayerWithinBuffer();
 	handlePlayerShooting();
 	if (infectedDuration <= 0) setState(playerStates.normal);
 	else infectedDuration--;
@@ -58,8 +56,11 @@ function setState(state) {
 		break;
 			
 	case playerStates.infected:
-		playerState = playerStates.infected;
-		initInfected(); break;
+		if (playerState != playerStates.infected)
+		{
+			playerState = playerStates.infected;
+			initInfected();
+		}break;
 			
 	case playerStates.respawning:
 		break;

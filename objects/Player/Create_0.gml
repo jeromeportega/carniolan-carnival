@@ -14,7 +14,7 @@ insDebug1 = 0;
 insDebug2 = 0;
 
 //Shooting variables
-FIRERATE = global.FRAMERATE/2; //Shots per second
+FIRERATE = global.FRAMERATE/.2; //Shots per second
 shootCD = 0;
 
 //For infected state
@@ -24,7 +24,7 @@ oscilateFreqs = ds_list_create();
 oscilatePhases = ds_list_create();
 
 playerState = playerStates.normal;
-setState(playerStates.infected);
+//setState(playerStates.infected);
 
 //Spawn the player at the horizontal center of the screen and the vertical center of its vertical boundaries
 x = room_width/2;

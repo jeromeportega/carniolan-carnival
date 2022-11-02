@@ -8,6 +8,7 @@
     {"id":{"name":"Mites","path":"objects/Mites/Mites.yy",},"order":4,},
     {"id":{"name":"s_Honey","path":"sprites/s_Honey/s_Honey.yy",},"order":1,},
     {"id":{"name":"GameManager","path":"objects/GameManager/GameManager.yy",},"order":1,},
+    {"id":{"name":"LivesFont","path":"fonts/LivesFont/LivesFont.yy",},"order":0,},
     {"id":{"name":"s_PowerUp","path":"sprites/s_PowerUp/s_PowerUp.yy",},"order":8,},
     {"id":{"name":"PowerUp","path":"objects/PowerUp/PowerUp.yy",},"order":9,},
     {"id":{"name":"s_HummingBird","path":"sprites/s_HummingBird/s_HummingBird.yy",},"order":7,},
