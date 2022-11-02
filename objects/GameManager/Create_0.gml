@@ -24,8 +24,8 @@ global.isPaused = false;
 enum playerStates {
 	normal,
 	infected,
-	invincible,
-	respawning
+	respawning,
+	invincible
 }
 
 

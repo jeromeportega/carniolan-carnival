@@ -9,5 +9,5 @@ else {
 	var currX = event_data[?"posX"];
 	var input = room_width/2 - currX; //Get the difference
 	playerXInput = modulateInputs(input); //Push the value into a function to attenuate it
-	insDebug1 = playerXInput;
+	//insDebug1 = playerXInput;
 }
