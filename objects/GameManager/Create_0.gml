@@ -19,6 +19,7 @@ global.distance = 0;
 
 global.isPaused = false;
 
+global.infectedTIME = global.FRAMERATE * 30; // Three second infection at start;
 
 //Enums go here to be run once
 enum playerStates {

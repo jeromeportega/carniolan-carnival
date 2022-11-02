@@ -32,8 +32,8 @@ function executeNormal() {
 }
 
 function executeInfected() {
-	hspeed = maxHSpeed*getRandomAmplitude(60 - infectedDuration);
-	insDebug1 = hspeed;// maxHSpeed*getRandomAmplitude(60 - infectedDuration);
+	hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed + maxHSpeed*getRandomAmplitude(global.infectedTIME - infectedDuration);
+	insDebug1 = hspeed;
 	hspeed = sign(hspeed) * min(2 * maxHSpeed, abs(hspeed));
 	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
 	boundPlayerWithinBuffer();
@@ -75,9 +75,9 @@ function setState(state) {
 //Set infected duration and create the random coefficients for continuous random motion
 function initInfected() {
 	randomize();
-	infectedDuration = global.FRAMERATE * 60;
+	infectedDuration = global.infectedTIME;
 	
-	var amplitude = 2.4/4;
+	var amplitude = 2.4;
 	var phase = 90;
 	var freq = 20;
 	

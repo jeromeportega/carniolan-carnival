@@ -18,6 +18,7 @@ FIRERATE = global.FRAMERATE/2; //Shots per second
 shootCD = 0;
 
 //For infected state
+infectedDuration = 0;
 oscilateCoeffs = ds_list_create();
 oscilateFreqs = ds_list_create();
 oscilatePhases = ds_list_create();
