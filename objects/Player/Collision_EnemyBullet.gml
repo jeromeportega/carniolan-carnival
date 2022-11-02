@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-deletionBoundary = -6*256;
+global.lives--;
+playerState = playerStates.respawning;
+instance_destroy(other, true);
 
 
 
