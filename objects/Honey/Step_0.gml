@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+vspeed = global.pace;
 if (y >= deletionBoundary) instance_destroy(id, false);
 if (hspeed != 0) hspeed = sign(hspeed)* max((abs(hspeed) - breaking), 0);
 if (x < 32) { //32 is half the width of sprite
