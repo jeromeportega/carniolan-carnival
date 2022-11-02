@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed;//maxHAccel;
+hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed;
 
 hspeed = sign(hspeed) * min(maxHSpeed, abs(hspeed));
 

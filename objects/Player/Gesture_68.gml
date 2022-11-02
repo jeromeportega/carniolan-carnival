@@ -4,5 +4,5 @@
 
 
 
-
+//Set the input value to 0 on end of drag
 playerXInput = 0;

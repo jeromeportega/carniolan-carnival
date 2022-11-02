@@ -4,10 +4,13 @@
 
 playerState = playerStates.normal;
 
+//Movement variables
 maxHSpeed = 5;
 maxHAccel = 1;
 playerXInput = 0;
-startX = room_width/2;
+
+
+//Used for debugging info
 insDebug1 = 0;
 insDebug2 = 0;
 
