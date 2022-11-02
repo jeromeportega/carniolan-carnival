@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-deletionBoundary = -6*256;
+playerState = playerStates.infected;
+instance_destroy(other, true);
 
 
 

@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-temp_speed = 5; //will become global.pace
 hpValue = round(random_range(1,5));
 size = hpValue/3;
 deletionBoundary = room_height + 6*256;  //this number is six times the width of the sprite
