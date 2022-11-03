@@ -3,6 +3,7 @@
 if (playerState != playerStates.respawning || playerState != playerStates.invincible)
 {
 	global.lives--;
+	other.shouldSpawnGoodies = false;
 	setState(playerStates.respawning);
 	instance_destroy(other, true);
 }
