@@ -1,10 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (other.type == 0) {
+if (other.powerType == 0) {
 	setState(playerStates.invincible);
 }
-else if (other.type == 1) {
+else if (other.powerType == 1) {
 	setState(playerStates.rapidfire);
 }
 

@@ -4,3 +4,6 @@
 global.distance += 100/global.FRAMERATE;
 
 
+handlePowerUpSpawning();
+
+

@@ -26,6 +26,14 @@ global.respawnTIME = global.FRAMERATE *1;
 global.invincibleTIME = global.FRAMERATE * 5;
 global.sprayingTIME = global.FRAMERATE * 5;
 
+//For spawning powerUps
+nextPowerUp = instance_create_layer(x,y,"Instances", PowerUp);
+global.nextPowerUpType = nextPowerUp.powerType;
+instance_deactivate_object(nextPowerUp);
+POWER_UP_SPAWNRATE = global.FRAMERATE * 10; //For testing 10 is aggressive
+powerUpCD = POWER_UP_SPAWNRATE;
+
+
 //Enums go here to be run once
 enum playerStates {
 	normal,
@@ -34,6 +42,12 @@ enum playerStates {
 	invincible,
 	rapidfire
 }
+
+enum powerUps {
+	shield,
+	rapid	
+}
+
 function restartGame(){
 global.pace = global.MINPACE;
 global.lives = 3;
@@ -54,6 +68,25 @@ instance_destroy(PowerUp, true);
 instance_create_layer(x, y,"Instances", Player);
 }
 
+
+function generateNextPowerUp() {
+	nextPowerUp = instance_create_layer(x,y,"Instances", PowerUp);
+	global.nextPowerUpType = nextPowerUp.powerType;
+	instance_deactivate_object(nextPowerUp);
+}
+
+function handlePowerUpSpawning() {
+	if (powerUpCD == 0) {
+		instance_activate_object(nextPowerUp);
+		nextPowerUp.x = irandom_range(32, room_width - 32);
+		nextPowerUp.y = -100;
+	
+		generateNextPowerUp();
+	
+		powerUpCD = POWER_UP_SPAWNRATE;
+	}
+	else powerUpCD = max(0, powerUpCD - 1);	
+}
 
 //SetUp
 
