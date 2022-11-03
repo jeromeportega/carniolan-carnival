@@ -3,10 +3,8 @@
 
 
 //Movement variables
-maxHSpeed = 5;
-maxHAccel = 1;
-playerXInput = 0;
-targetX = room_width/2;
+maxHSpeed = 5; //Max speed the player can move in normal state
+targetX = room_width/2; //Target location for movement starts middle screen
 
 
 //Used for debugging info
@@ -15,31 +13,33 @@ insDebug2 = 0;
 
 //Shooting variables
 FIRERATE = global.FRAMERATE; //Shots per second
-shootCD = 0;
-spdMult = 2;
+shootCD = 0; //To flag to shoot
+spdMult = 2; //To adjust bullet speed
+
+//To time temporary states to return to normal.
+stateDuration = 0;
 
 //For infected state
-stateDuration = 0;
 oscilateCoeffs = ds_list_create();
 oscilateFreqs = ds_list_create();
 oscilatePhases = ds_list_create();
 
-//for Respawn state
+//for Respawn state to vary the speed of the flashing, and its decay rate
 flashFrequency = 36;
 flashDamping = 3;
 flashBias = .25;
 
-//For invince state
+//For invince state to vary the speed of the flashing, and its decay rate
 invFlashFrequency = 15;
 invFlashDamping = 30;
 invFlashBias = 0;
 
 //For Spraying state
-rateIncrease = 10;
-spread = 13;
+rateIncrease = 10; //The factor of increase in firerate during rapidFire
+spread = 13; //The half angle of spread during rapid fire, 10 means a 20 degree total spread centered around 90 (Up)
 
 playerState = playerStates.normal;
-//setState(playerStates.infected);
+//setState(playerStates.infected); //For testing stateMachine
 
 //Spawn the player at the horizontal center of the screen and the vertical center of its vertical boundaries
 x = room_width/2;

@@ -2,7 +2,5 @@
 // You can write your code in this editor
 
 
-
+//If drag ends then set the target to player's current location
 targetX = x;
-//Set the input value to 0 on end of drag
-playerXInput = 0;
