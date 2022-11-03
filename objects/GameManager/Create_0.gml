@@ -27,7 +27,8 @@ enum playerStates {
 	normal,
 	infected,
 	respawning,
-	invincible
+	invincible,
+	spraying
 }
 function restartGame(){
 global.pace = global.MINPACE;
