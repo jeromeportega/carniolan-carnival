@@ -38,7 +38,7 @@ rateIncrease = 10;
 spread = 13;
 
 playerState = playerStates.normal;
-setState(playerStates.invincible);
+//setState(playerStates.invincible);
 
 //Spawn the player at the horizontal center of the screen and the vertical center of its vertical boundaries
 x = room_width/2;

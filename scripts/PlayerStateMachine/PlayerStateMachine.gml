@@ -16,7 +16,7 @@ function executePlayerState(state){
 			executeInvincible(); break;
 			
 		case playerStates.rapidfire:
-			executeSpraying(); break;
+			executeRapidFire(); break;
 			
 		default:
 			break;	
@@ -69,7 +69,7 @@ function executeInvincible() {
 	
 }
 
-function executeSpraying() {
+function executeRapidFire() {
 	
 	hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed;
 	hspeed = sign(hspeed) * min(maxHSpeed, abs(hspeed));
