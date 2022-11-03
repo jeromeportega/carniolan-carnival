@@ -6,6 +6,7 @@
 maxHSpeed = 5;
 maxHAccel = 1;
 playerXInput = 0;
+targetX = room_width/2;
 
 
 //Used for debugging info
@@ -38,7 +39,7 @@ rateIncrease = 10;
 spread = 13;
 
 playerState = playerStates.normal;
-//setState(playerStates.invincible);
+//setState(playerStates.infected);
 
 //Spawn the player at the horizontal center of the screen and the vertical center of its vertical boundaries
 x = room_width/2;

@@ -25,19 +25,16 @@ function executePlayerState(state){
 }
 
 function executeNormal() {
-	
-	hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed;
-	hspeed = sign(hspeed) * min(maxHSpeed, abs(hspeed));
-	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
+	handlePlayerMovement();
 	handlePlayerShooting(spdMult * global.pace, 90);
 	
 }
 
 function executeInfected() {
-	hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed + maxHSpeed*getRandomAmplitude(global.infectedTIME - stateDuration);
-	insDebug1 = hspeed;
-	hspeed = sign(hspeed) * min(2 * maxHSpeed, abs(hspeed));
-	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
+	
+	handlePlayerMovement(); 
+	x += maxHSpeed*getRandomAmplitude(global.infectedTIME - stateDuration);
+	
 	handlePlayerShooting(spdMult * global.pace, 90);
 	if (stateDuration <= 0) setState(playerStates.normal);
 	else stateDuration--;
@@ -45,10 +42,7 @@ function executeInfected() {
 
 function executeRespawning() {
 	
-	hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed;
-	hspeed = sign(hspeed) * min(maxHSpeed, abs(hspeed));
-	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
-	
+	handlePlayerMovement();	
 	handlePlayerShooting(spdMult * global.pace, 90);
 	
 	if (stateDuration <= 0) setState(playerStates.normal);
@@ -58,10 +52,7 @@ function executeRespawning() {
 
 function executeInvincible() {
 	
-	hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed;
-	hspeed = sign(hspeed) * min(maxHSpeed, abs(hspeed));
-	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
-	
+	handlePlayerMovement();
 	handlePlayerShooting(spdMult * global.pace, 90);
 	
 	if (stateDuration <= 0) setState(playerStates.normal);
@@ -71,10 +62,7 @@ function executeInvincible() {
 
 function executeRapidFire() {
 	
-	hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed;
-	hspeed = sign(hspeed) * min(maxHSpeed, abs(hspeed));
-	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
-	
+	handlePlayerMovement();
 	handlePlayerShooting(spdMult * global.pace + (rateIncrease), 90 + random_range(-spread, spread));
 	
 	if (stateDuration <= 0) {
@@ -128,7 +116,7 @@ function setState(state) {
 function initInfected() {
 	stateDuration = global.infectedTIME;
 	
-	var amplitude = 2.4;
+	var amplitude = 8/4;
 	var phase = 90;
 	var freq = 20;
 	
