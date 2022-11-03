@@ -1,10 +1,5 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function modulateInputs (input) {
-	input = 2 * input/room_width;
-	input = 1.2 * max(-1, min(input, 1));
-	return -input;
-}
 
 function shoot(spd, dir) {
 	var bullet = instance_create_layer(x, y, "Instances", Bullet);
@@ -62,3 +57,7 @@ function configurePlayerShader() {
 	else shader_reset();
 }
 
+function handlePlayerMovement() {
+	hspeed = sign(targetX - x)*maxHSpeed*(min(room_width/10, abs(targetX - x))/(room_width/10));
+	if (abs(hspeed) > abs(targetX - x)) hspeed = sign(hspeed)*abs(targetX - x);
+}
