@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
+//This is currently drawing some basic info to the screen to validate functionality
 draw_set_font(LivesFont);
 draw_text(40, 40, "Lives: " + string(global.lives));
 draw_text(40, 80, "Score: " + string(global.score));

@@ -26,7 +26,7 @@ global.respawnTIME = global.FRAMERATE *1;
 global.invincibleTIME = global.FRAMERATE * 5;
 global.sprayingTIME = global.FRAMERATE * 5;
 
-//For spawning powerUps
+//For spawning powerUps and initial powerUp
 nextPowerUp = instance_create_layer(x,y,"Instances", PowerUp);
 global.nextPowerUpType = nextPowerUp.powerType;
 instance_deactivate_object(nextPowerUp);
@@ -48,6 +48,7 @@ enum powerUps {
 	rapid	
 }
 
+//Resets the relevant variables to starta new game, and clears the gameRoom of all unimportant objects
 function restartGame(){
 global.pace = global.MINPACE;
 global.lives = 3;
@@ -68,13 +69,15 @@ instance_destroy(PowerUp, true);
 instance_create_layer(x, y,"Instances", Player);
 }
 
-
+//Creates a new powerUp saves its ID and type, then deactivates it to spawn it ata random location at the right moment. 
 function generateNextPowerUp() {
 	nextPowerUp = instance_create_layer(x,y,"Instances", PowerUp);
 	global.nextPowerUpType = nextPowerUp.powerType;
 	instance_deactivate_object(nextPowerUp);
 }
 
+
+//Executes the code to check if a powerUp should be spawned, spawn it, generatea new one, or decrement the timer
 function handlePowerUpSpawning() {
 	if (powerUpCD == 0) {
 		instance_activate_object(nextPowerUp);
