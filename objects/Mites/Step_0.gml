@@ -3,10 +3,11 @@
 
 //If we are homing and player exists, then adjust direction to chase player
 if (homing && instance_exists(Player)) {
+	//Move directly towards the player
 	move_towards_point(Player.x, Player.y, global.pace);
 	image_angle = direction;
 	homingDuration--;
-	if (homingDuration <= 0) homing = false;
+	if (homingDuration <= 0) homing = false; //Cancel homing after duration
 }
 
 
