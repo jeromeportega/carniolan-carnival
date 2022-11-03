@@ -1,10 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-powerType = irandom_range(0,1);
+//Randomly select a type on create
+powerType = irandom_range(0,1); //Inclusive
+
+//Select the corresping sub-image to draw
 image_index = powerType;
-image_speed = 0;
-rotationSpeed = -1;
-vspeed = global.pace/1.25; //Falls a little slower
+image_speed = 0; //Disable animation (If positive -> would cycle through all icons)
+rotationSpeed = -1; //For rotatin the icon on screen
+vspeed = global.pace/1.25; //Falls a little slower than everything else
 
 
