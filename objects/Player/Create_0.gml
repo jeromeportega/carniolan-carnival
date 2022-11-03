@@ -28,12 +28,17 @@ flashFrequency = 36;
 flashDamping = 3;
 flashBias = .25;
 
+//For invince state
+invFlashFrequency = 15;
+invFlashDamping = 30;
+invFlashBias = 0;
+
 //For Spraying state
 rateIncrease = 10;
 spread = 13;
 
 playerState = playerStates.normal;
-//setState(playerStates.spraying);
+setState(playerStates.invincible);
 
 //Spawn the player at the horizontal center of the screen and the vertical center of its vertical boundaries
 x = room_width/2;

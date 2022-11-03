@@ -14,6 +14,7 @@
     {"id":{"name":"PowerUp","path":"objects/PowerUp/PowerUp.yy",},"order":9,},
     {"id":{"name":"s_HummingBird","path":"sprites/s_HummingBird/s_HummingBird.yy",},"order":7,},
     {"id":{"name":"s_Bullet","path":"sprites/s_Bullet/s_Bullet.yy",},"order":3,},
+    {"id":{"name":"invinceBlink","path":"shaders/invinceBlink/invinceBlink.yy",},"order":1,},
     {"id":{"name":"Flower","path":"objects/Flower/Flower.yy",},"order":3,},
     {"id":{"name":"EnemyBullet","path":"objects/EnemyBullet/EnemyBullet.yy",},"order":6,},
     {"id":{"name":"PlayerSupportFunctions","path":"scripts/PlayerSupportFunctions/PlayerSupportFunctions.yy",},"order":1,},

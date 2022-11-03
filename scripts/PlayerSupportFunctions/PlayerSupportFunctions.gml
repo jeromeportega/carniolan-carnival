@@ -44,5 +44,21 @@ function getRandomAmplitude(time) {
 }
 
 
-
+function configurePlayerShader() {
+	if (playerState == playerStates.respawning)
+	{
+		shader_set(respawnBlink);
+		var shader_params = shader_get_uniform(respawnBlink, "mask");
+		var a = (dsin((flashFrequency*flashDamping*global.respawnTIME/((flashDamping+1+flashBias)*global.respawnTIME - stateDuration))*(2*global.FRAMERATE - stateDuration))+1)/2;
+		shader_set_uniform_f(shader_params, a);
+	}
+	else if (playerState == playerStates.invincible)
+	{
+		shader_set(invinceBlink);
+		var shader_params = shader_get_uniform(respawnBlink, "mask");
+		var a = (dsin((invFlashFrequency*invFlashDamping*global.invincibleTIME/((invFlashDamping+1+invFlashBias)*global.invincibleTIME - stateDuration))*(2*global.FRAMERATE - stateDuration))+1)/2;
+		shader_set_uniform_f(shader_params, a);
+	}
+	else shader_reset();
+}
 
