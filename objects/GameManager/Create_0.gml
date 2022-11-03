@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+randomize();
+
 //Global constants
 global.FRAMERATE = 60;
 global.MAXPACE = 15;
@@ -21,6 +23,8 @@ global.isPaused = false;
 
 global.infectedTIME = global.FRAMERATE * 10; // Ten second infection at start;
 global.respawnTIME = global.FRAMERATE *1;
+global.invincibleTIME = global.FRAMERATE * 5;
+global.sprayingTIME = global.FRAMERATE * 5;
 
 //Enums go here to be run once
 enum playerStates {
@@ -28,7 +32,7 @@ enum playerStates {
 	infected,
 	respawning,
 	invincible,
-	spraying
+	rapidfire
 }
 function restartGame(){
 global.pace = global.MINPACE;

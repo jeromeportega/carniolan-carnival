@@ -15,6 +15,7 @@ insDebug2 = 0;
 //Shooting variables
 FIRERATE = global.FRAMERATE; //Shots per second
 shootCD = 0;
+spdMult = 2;
 
 //For infected state
 stateDuration = 0;
@@ -27,8 +28,12 @@ flashFrequency = 36;
 flashDamping = 3;
 flashBias = .25;
 
+//For Spraying state
+rateIncrease = 10;
+spread = 13;
+
 playerState = playerStates.normal;
-//setState(playerStates.respawning);
+//setState(playerStates.spraying);
 
 //Spawn the player at the horizontal center of the screen and the vertical center of its vertical boundaries
 x = room_width/2;

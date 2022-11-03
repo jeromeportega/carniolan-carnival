@@ -15,6 +15,9 @@ function executePlayerState(state){
 		case playerStates.invincible:
 			executeInvincible(); break;
 			
+		case playerStates.rapidfire:
+			executeSpraying(); break;
+			
 		default:
 			break;	
 	}
@@ -26,7 +29,7 @@ function executeNormal() {
 	hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed;
 	hspeed = sign(hspeed) * min(maxHSpeed, abs(hspeed));
 	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
-	handlePlayerShooting();
+	handlePlayerShooting(spdMult * global.pace, 90);
 	
 }
 
@@ -35,7 +38,7 @@ function executeInfected() {
 	insDebug1 = hspeed;
 	hspeed = sign(hspeed) * min(2 * maxHSpeed, abs(hspeed));
 	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
-	handlePlayerShooting();
+	handlePlayerShooting(spdMult * global.pace, 90);
 	if (stateDuration <= 0) setState(playerStates.normal);
 	else stateDuration--;
 }
@@ -46,7 +49,7 @@ function executeRespawning() {
 	hspeed = sign(hspeed) * min(maxHSpeed, abs(hspeed));
 	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
 	
-	handlePlayerShooting();
+	handlePlayerShooting(spdMult * global.pace, 90);
 	
 	if (stateDuration <= 0) setState(playerStates.normal);
 	else stateDuration--;
@@ -54,6 +57,32 @@ function executeRespawning() {
 }
 
 function executeInvincible() {
+	
+	hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed;
+	hspeed = sign(hspeed) * min(maxHSpeed, abs(hspeed));
+	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
+	
+	handlePlayerShooting(spdMult * global.pace, 90);
+	
+	if (stateDuration <= 0) setState(playerStates.normal);
+	else stateDuration--;
+	
+}
+
+function executeSpraying() {
+	
+	hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed;
+	hspeed = sign(hspeed) * min(maxHSpeed, abs(hspeed));
+	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
+	
+	handlePlayerShooting(spdMult * global.pace + (rateIncrease), 90 + random_range(-spread, spread));
+	
+	if (stateDuration <= 0) {
+		FIRERATE *= rateIncrease;
+		shootCD = FIRERATE;
+		setState(playerStates.normal);
+	}
+	else stateDuration--;
 	
 }
 
@@ -79,6 +108,15 @@ function setState(state) {
 		}break;
 			
 	case playerStates.invincible:
+		playerState = playerStates.invincible;
+		stateDuration = global.invincibleTIME;
+		break;
+		
+	case playerStates.rapidfire:
+		playerState = playerStates.rapidfire;
+		stateDuration = global.sprayingTIME;
+		shootCD = 0;
+		FIRERATE /= rateIncrease;
 		break;
 			
 	default:
@@ -88,7 +126,6 @@ function setState(state) {
 
 //Set infected duration and create the random coefficients for continuous random motion
 function initInfected() {
-	randomize();
 	stateDuration = global.infectedTIME;
 	
 	var amplitude = 2.4;

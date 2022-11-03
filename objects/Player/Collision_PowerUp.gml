@@ -5,7 +5,7 @@ if (other.type == 0) {
 	setState(playerStates.invincible);
 }
 else if (other.type == 1) {
-	setState(playerStates.spraying);
+	setState(playerStates.rapidfire);
 }
 
 instance_destroy(other);
