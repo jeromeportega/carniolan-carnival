@@ -31,16 +31,25 @@ function executeNormal() {
 }
 
 function executeInfected() {
-	hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed + maxHSpeed*getRandomAmplitude(global.infectedTIME - infectedDuration);
+	hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed + maxHSpeed*getRandomAmplitude(global.infectedTIME - stateDuration);
 	insDebug1 = hspeed;
 	hspeed = sign(hspeed) * min(2 * maxHSpeed, abs(hspeed));
 	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
 	handlePlayerShooting();
-	if (infectedDuration <= 0) setState(playerStates.normal);
-	else infectedDuration--;
+	if (stateDuration <= 0) setState(playerStates.normal);
+	else stateDuration--;
 }
 
 function executeRespawning() {
+	
+	hspeed = sign(playerXInput)*(abs(playerXInput) - .2) * maxHSpeed;
+	hspeed = sign(hspeed) * min(maxHSpeed, abs(hspeed));
+	if (abs(playerXInput) <= .2) hspeed = sign(hspeed) * max(0, abs(hspeed) - abs(playerXInput/.2)*maxHAccel);
+	
+	handlePlayerShooting();
+	
+	if (stateDuration <= 0) setState(playerStates.normal);
+	else stateDuration--;
 	
 }
 
@@ -63,7 +72,11 @@ function setState(state) {
 		}break;
 			
 	case playerStates.respawning:
-		break;
+		if (playerState != playerStates.respawning) 
+		{
+			playerState = playerStates.respawning;
+			stateDuration = global.respawnTIME; //2 second
+		}break;
 			
 	case playerStates.invincible:
 		break;
@@ -76,7 +89,7 @@ function setState(state) {
 //Set infected duration and create the random coefficients for continuous random motion
 function initInfected() {
 	randomize();
-	infectedDuration = global.infectedTIME;
+	stateDuration = global.infectedTIME;
 	
 	var amplitude = 2.4;
 	var phase = 90;

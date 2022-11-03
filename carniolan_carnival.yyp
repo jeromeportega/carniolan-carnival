@@ -6,6 +6,7 @@
     {"id":{"name":"s_Wasp","path":"sprites/s_Wasp/s_Wasp.yy",},"order":6,},
     {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},"order":15,},
     {"id":{"name":"Mites","path":"objects/Mites/Mites.yy",},"order":4,},
+    {"id":{"name":"respawnBlink","path":"shaders/respawnBlink/respawnBlink.yy",},"order":0,},
     {"id":{"name":"s_Honey","path":"sprites/s_Honey/s_Honey.yy",},"order":1,},
     {"id":{"name":"GameManager","path":"objects/GameManager/GameManager.yy",},"order":1,},
     {"id":{"name":"LivesFont","path":"fonts/LivesFont/LivesFont.yy",},"order":0,},
