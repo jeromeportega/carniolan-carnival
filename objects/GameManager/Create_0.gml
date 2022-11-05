@@ -32,6 +32,8 @@ global.nextPowerUpType = nextPowerUp.powerType;
 instance_deactivate_object(nextPowerUp);
 POWER_UP_SPAWNRATE = global.FRAMERATE * 10; //For testing 10 is aggressive
 powerUpCD = POWER_UP_SPAWNRATE;
+FLOWER_SPAWNRATE = global.FRAMERATE * 20; //For testing 10 is aggressive
+flowerCD = FLOWER_SPAWNRATE
 
 
 //Enums go here to be run once
@@ -91,7 +93,14 @@ function handlePowerUpSpawning() {
 	else powerUpCD = max(0, powerUpCD - 1);	
 }
 
-//SetUp
-
-
-
+//Executes the code to check if a powerUp should be spawned, spawn it, generatea new one, or decrement the timer
+function handleFlowerSpawning() {
+	if (flowerCD == 0) {
+		var nextFlower = instance_create_layer(x,y,"Instances", Flower);
+		nextFlower.x = irandom_range(32, room_width - 32);
+		nextFlower.y = -256;
+	
+		flowerCD = FLOWER_SPAWNRATE;
+	}
+	else flowerCD = max(0, flowerCD - 1);
+}
