@@ -3,6 +3,3 @@
 if (y <= deletionBoundary) instance_destroy(id, false);
 if (x <= -128) instance_destroy(id, false);
 else if (x >= room_width + 128) instance_destroy(id, false);
-
-
-

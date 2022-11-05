@@ -19,6 +19,7 @@
     {"id":{"name":"EnemyBullet","path":"objects/EnemyBullet/EnemyBullet.yy",},"order":6,},
     {"id":{"name":"PlayerSupportFunctions","path":"scripts/PlayerSupportFunctions/PlayerSupportFunctions.yy",},"order":1,},
     {"id":{"name":"s_Flower","path":"sprites/s_Flower/s_Flower.yy",},"order":2,},
+    {"id":{"name":"WaspMovement","path":"scripts/WaspMovement/WaspMovement.yy",},"order":2,},
     {"id":{"name":"s_EnemyBullet","path":"sprites/s_EnemyBullet/s_EnemyBullet.yy",},"order":4,},
     {"id":{"name":"Bullet","path":"objects/Bullet/Bullet.yy",},"order":5,},
     {"id":{"name":"Honey","path":"objects/Honey/Honey.yy",},"order":7,},
