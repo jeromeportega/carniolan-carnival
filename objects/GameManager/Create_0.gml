@@ -30,9 +30,9 @@ global.sprayingTIME = global.FRAMERATE * 5;
 nextPowerUp = instance_create_layer(x,y,"Instances", PowerUp);
 global.nextPowerUpType = nextPowerUp.powerType;
 instance_deactivate_object(nextPowerUp);
-POWER_UP_SPAWNRATE = global.FRAMERATE * 10; //For testing 10 is aggressive
+POWER_UP_SPAWNRATE = global.FRAMERATE * 20; //For testing 10 is aggressive
 powerUpCD = POWER_UP_SPAWNRATE;
-FLOWER_SPAWNRATE = global.FRAMERATE * 20; //For testing 10 is aggressive
+FLOWER_SPAWNRATE = global.FRAMERATE * 1.5; //For testing 10 is aggressive
 flowerCD = FLOWER_SPAWNRATE
 
 
