@@ -3,7 +3,7 @@
 
 
 //Movement variables
-maxHSpeed = 5; //Max speed the player can move in normal state
+maxHSpeed = 10; //Max speed the player can move in normal state
 targetX = room_width/2; //Target location for movement starts middle screen
 
 
@@ -12,7 +12,8 @@ insDebug1 = 0;
 insDebug2 = 0;
 
 //Shooting variables
-FIRERATE = global.FRAMERATE; //Shots per second
+__NORMAL_FIRERATE = global.FRAMERATE
+FIRERATE = __NORMAL_FIRERATE; //Shots per second
 shootCD = 0; //To flag to shoot
 spdMult = 2; //To adjust bullet speed
 

@@ -78,7 +78,7 @@ function executeRapidFire() {
 	handlePlayerShooting(spdMult * global.pace + (rateIncrease), 90 + random_range(-spread, spread));
 	
 	if (stateDuration <= 0) { //When duration is over, put shooting on cooldown, reset the FIRERATE to normal return to normal state
-		FIRERATE *= rateIncrease;
+		FIRERATE = __NORMAL_FIRERATE;
 		shootCD = FIRERATE;
 		setState(playerStates.normal);
 	}
@@ -92,12 +92,14 @@ function setState(state) {
 	switch state {
 	case playerStates.normal:
 		playerState = playerStates.normal;
+		FIRERATE = __NORMAL_FIRERATE;
 		break;
 			
 	case playerStates.infected:
 		if (playerState != playerStates.infected) //We are disallowing chaining of infected state
 		{
 			playerState = playerStates.infected;
+			FIRERATE = __NORMAL_FIRERATE;
 			initInfected();
 		}break;
 			
@@ -106,21 +108,25 @@ function setState(state) {
 		{
 			playerState = playerStates.respawning;
 			stateDuration = global.respawnTIME; //2 second
-		}break;
+		}
+		FIRERATE = __NORMAL_FIRERATE;
+		break;
 			
 	case playerStates.invincible: //We are allowing powerUp chaining, its a buff to the player although unlikely/impossible to happen
 		playerState = playerStates.invincible;
 		stateDuration = global.invincibleTIME;
+		FIRERATE = __NORMAL_FIRERATE;
 		break;
 		
 	case playerStates.rapidfire: //We are allowing powerUp chaining, its a buff to the player although unlikely/impossible to happen
-		playerState = playerStates.rapidfire;
-		stateDuration = global.sprayingTIME;
-		if (playerState == playerStates.rapidfire) //Although we are allwoing chaining of the state, we cannot allow stacking of the rateIncrease
+		if (playerState != playerStates.rapidfire) //Although we are allwoing chaining of the state, we cannot allow stacking of the rateIncrease
 		{
 			shootCD = 0; //When entering the state we refresh the cooldown to have an immediate impact
 			FIRERATE /= rateIncrease; //We are increasing the firerate bya factor of rateIncrease
-		}break;
+		}
+		playerState = playerStates.rapidfire;
+		stateDuration = global.sprayingTIME;
+		break;
 			
 	default:
 		break;	

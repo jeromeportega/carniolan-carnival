@@ -15,7 +15,7 @@ function shoot(spd, dir) {
 function handlePlayerShooting(spd, dir) {
 	if (shootCD == 0) {
 		shoot(spd, dir);
-		shootCD = FIRERATE;
+		shootCD = FIRERATE/(global.pace/global.MINPACE);
 	}
 	else {
 		shootCD = max(0, shootCD-1);
@@ -65,7 +65,7 @@ function configurePlayerShader() {
 //Sets Hspeed to move player towards where the current targetX is
 function handlePlayerMovement() {
 	//Sets hspeed up to maxHSpeed but scales it smaller to slow movement as we get close to targetX
-	hspeed = sign(targetX - x)*maxHSpeed*(min(room_width/10, abs(targetX - x))/(room_width/10));
+	hspeed = sign(targetX - x)*maxHSpeed*(global.pace/global.MINPACE)*(min(room_width/20, abs(targetX - x))/(room_width/20));
 	
 	//If we would move past targetX with current hspeed, set hspeed to hit target X exactly
 	//this prevents oscilations around targetX
