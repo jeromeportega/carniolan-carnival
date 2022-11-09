@@ -10,4 +10,6 @@ image_speed = 0; //Disable animation (If positive -> would cycle through all ico
 rotationSpeed = -1; //For rotatin the icon on screen
 vspeed = global.pace/1.25; //Falls a little slower than everything else
 
+image_xscale = 2
+image_yscale = 2
 
