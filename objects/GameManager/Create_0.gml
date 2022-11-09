@@ -5,7 +5,7 @@ randomize();
 
 //Global constants
 global.FRAMERATE = 60;
-global.MAXPACE = 15;
+global.MAXPACE = 30;
 global.MINPACE  = 5;
 
 //Define the boundary the player object can move within
@@ -88,7 +88,7 @@ function handlePowerUpSpawning() {
 	
 		generateNextPowerUp();
 	
-		powerUpCD = POWER_UP_SPAWNRATE;
+		powerUpCD = POWER_UP_SPAWNRATE/(global.pace/global.MINPACE);
 	}
 	else powerUpCD = max(0, powerUpCD - 1);	
 }
@@ -100,7 +100,7 @@ function handleFlowerSpawning() {
 		nextFlower.x = irandom_range(32, room_width - 32);
 		nextFlower.y = -256;
 	
-		flowerCD = FLOWER_SPAWNRATE;
+		flowerCD = FLOWER_SPAWNRATE/(global.pace/global.MINPACE);
 	}
 	else flowerCD = max(0, flowerCD - 1);
 }
