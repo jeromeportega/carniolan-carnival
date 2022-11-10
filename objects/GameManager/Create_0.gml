@@ -21,9 +21,11 @@ global.LOWER_BOUND = room_height - 128;
 global.UPPER_BOUND = room_height - 2 * 128;
 
 //State vars
+pointsPerSec = 100
 global.gameState = 0;
 global.__BOSSSPAWNRATE = global.FRAMERATE * 60;
 global.bossCD = global.__BOSSSPAWNRATE;
+paceSlope = (global.MAXPACE - global.MINPACE)/(pointsPerSec*60*10); // Reach max diff in 10 minutes
 
 //Global variables
 global.pace = global.MINPACE;
@@ -120,4 +122,10 @@ function handleFlowerSpawning() {
 function spawnBoss() {
 	var boss = instance_create_layer(room_width/2, room_height/8,"Instances", Wasp);
 	boss.enemy_health = 10 *  (global.pace/global.MINPACE);
+}
+
+
+if (global.debug) {
+	instance_create_layer(896, 736, "Instances", testingIncrementer);
+	instance_create_layer(896, 992, "Instances", testingDecrementer);
 }

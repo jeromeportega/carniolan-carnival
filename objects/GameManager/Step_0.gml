@@ -2,7 +2,10 @@
 // You can write your code in this editor
 
 //Tracking the gameDistance traveled as a means of trackign score and increasing difficulty
-global.distance += 100/global.FRAMERATE;
+global.distance += pointsPerSec/global.FRAMERATE;
+
+//If not in debug mode pace scales with distance, otherwise it is not scaled automatically for testing
+if (!global.debug) global.pace = global.MINPACE + paceSlope*global.distance;
 
 if (global.gameState == 0){
 	handleFlowerSpawning();
