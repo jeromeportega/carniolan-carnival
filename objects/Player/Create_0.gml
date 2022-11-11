@@ -12,10 +12,10 @@ insDebug1 = 0;
 insDebug2 = 0;
 
 //Shooting variables
-__NORMAL_FIRERATE = global.FRAMERATE
+__NORMAL_FIRERATE = global.FRAMERATE/1.5
 FIRERATE = __NORMAL_FIRERATE; //Shots per second
 shootCD = 0; //To flag to shoot
-spdMult = 2; //To adjust bullet speed
+spdMult = 1; //To adjust bullet speed
 
 //To time temporary states to return to normal.
 stateDuration = 0;
