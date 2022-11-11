@@ -1,14 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "AdManager",
-  "spriteId": null,
+  "name": "Obj_YoYo_textbox",
+  "spriteId": {
+    "name": "Spr_YoYo_textbox",
+    "path": "sprites/Spr_YoYo_textbox/Spr_YoYo_textbox.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "Obj_YoYo_text",
+    "path": "objects/Obj_YoYo_text/Obj_YoYo_text.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -22,13 +28,12 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":70,"eventType":7,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Managers",
-    "path": "folders/Objects/Managers.yy",
+    "name": "Objects",
+    "path": "folders/YoYo Extensions Assets/Objects.yy",
   },
 }
