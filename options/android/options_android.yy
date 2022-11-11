@@ -9,7 +9,7 @@
   "option_android_build_tools": "",
   "option_android_support_lib": "31.0.0",
   "option_android_target_sdk": "31",
-  "option_android_minimum_sdk": "16",
+  "option_android_minimum_sdk": "20",
   "option_android_compile_sdk": "31",
   "option_android_package_domain": "com",
   "option_android_package_company": "company",
