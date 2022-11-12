@@ -7,6 +7,7 @@
     {"id":{"name":"s_Dust","path":"sprites/s_Dust/s_Dust.yy",},"order":11,},
     {"id":{"name":"s_Wasp","path":"sprites/s_Wasp/s_Wasp.yy",},"order":6,},
     {"id":{"name":"Obj_AdMob_Interstitial","path":"objects/Obj_AdMob_Interstitial/Obj_AdMob_Interstitial.yy",},"order":3,},
+    {"id":{"name":"s_Chunk","path":"sprites/s_Chunk/s_Chunk.yy",},"order":12,},
     {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},"order":15,},
     {"id":{"name":"Mites","path":"objects/Mites/Mites.yy",},"order":4,},
     {"id":{"name":"Font_YoYo_50","path":"fonts/Font_YoYo_50/Font_YoYo_50.yy",},"order":2,},
