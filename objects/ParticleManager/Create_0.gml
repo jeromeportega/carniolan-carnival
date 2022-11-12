@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-partSys = part_system_create_layer("Instances", false);
+partSys = part_system_create_layer("Particles", false);
 
 
 particle_Bullet = part_type_create();
