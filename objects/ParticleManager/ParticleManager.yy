@@ -1,11 +1,8 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "Bullet",
-  "spriteId": {
-    "name": "s_Bullet",
-    "path": "sprites/s_Bullet/s_Bullet.yy",
-  },
+  "name": "ParticleManager",
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -27,12 +24,11 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Managers",
+    "path": "folders/Objects/Managers.yy",
   },
 }
