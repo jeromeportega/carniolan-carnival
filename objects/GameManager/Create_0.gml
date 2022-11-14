@@ -49,6 +49,9 @@ powerUpCD = POWER_UP_SPAWNRATE;
 FLOWER_SPAWNRATE = global.FRAMERATE * 1.5; //For testing 10 is aggressive
 flowerCD = FLOWER_SPAWNRATE
 
+paused = false
+paused_surface = -1
+
 
 //Enums go here to be run once
 enum playerStates {

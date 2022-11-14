@@ -25,3 +25,7 @@ if (global.debug){
 	last5FPS[trackPos] = 1000/(currFrame - lastFrame);
 	trackPos = (trackPos + 1) % 5;
 }
+
+if (paused) {
+	alarm[0]++
+}
