@@ -23,7 +23,7 @@ global.UPPER_BOUND = room_height - 2 * 128;
 //State vars
 pointsPerSec = 100
 global.gameState = 0;
-global.__BOSSSPAWNRATE = global.FRAMERATE * 60;
+global.__BOSSSPAWNRATE = global.FRAMERATE * 60 * 2;
 global.bossCD = global.__BOSSSPAWNRATE;
 paceSlope = (global.MAXPACE - global.MINPACE)/(pointsPerSec*60*10); // Reach max diff in 10 minutes
 
@@ -35,18 +35,18 @@ global.distance = 0;
 
 global.isPaused = false;
 
-global.infectedTIME = global.FRAMERATE * 10; // Ten second infection at start;
+global.infectedTIME = global.FRAMERATE * 5; // Ten second infection at start;
 global.respawnTIME = global.FRAMERATE *1;
 global.invincibleTIME = global.FRAMERATE * 5;
-global.sprayingTIME = global.FRAMERATE * 5;
+global.sprayingTIME = global.FRAMERATE * 3;
 
 //For spawning powerUps and initial powerUp
 nextPowerUp = instance_create_layer(x,y,"Instances", PowerUp);
 global.nextPowerUpType = nextPowerUp.powerType;
 instance_deactivate_object(nextPowerUp);
-POWER_UP_SPAWNRATE = global.FRAMERATE * 20; //For testing 10 is aggressive
+POWER_UP_SPAWNRATE = global.FRAMERATE * 45; //For testing 10 is aggressive
 powerUpCD = POWER_UP_SPAWNRATE;
-FLOWER_SPAWNRATE = global.FRAMERATE * 1.5; //For testing 10 is aggressive
+FLOWER_SPAWNRATE = global.FRAMERATE * 1.4; //For testing 10 is aggressive
 flowerCD = FLOWER_SPAWNRATE
 
 
