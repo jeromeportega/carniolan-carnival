@@ -30,6 +30,7 @@ function executePlayerState(state){
 function executeNormal() {
 	handlePlayerMovement(); 
 	handlePlayerShooting(spdMult * global.pace, 90);
+	part_particles_create(ParticleManager.partSys, x, y, ParticleManager.particle_Player_Fly, 3);
 	
 }
 

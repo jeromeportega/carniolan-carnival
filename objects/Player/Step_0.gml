@@ -4,4 +4,3 @@
 //Calls the appropriate version of code for the current state
 //Keeps this event cleaner
 executePlayerState(playerState);
-

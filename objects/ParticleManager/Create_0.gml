@@ -37,3 +37,18 @@ part_type_orientation( particle_Flower_Big, 0, 360, 1, 1, 1);
 part_type_speed( particle_Flower_Big, global.MINPACE/2, global.MINPACE, -.1, 0);
 part_type_direction( particle_Flower_Big, 0, 360, 1, 1);
 part_type_color2(particle_Flower_Big, c_green, c_yellow);
+
+
+particle_Player_Fly = part_type_create();
+
+part_type_sprite(particle_Player_Fly, s_Chunk, 0, 0 , 0);
+part_type_size(particle_Player_Fly, .25, 1, .1, 0);
+part_type_life(particle_Player_Fly, 5, 20);
+part_type_alpha3(particle_Player_Fly, 1, 0.6, 0);
+part_type_orientation( particle_Player_Fly, 0, 360, 1, 1, 1);
+part_type_speed( particle_Player_Fly, global.MINPACE/2, global.MINPACE, -.1, 0);
+part_type_direction( particle_Player_Fly, 250, 290, 1, 1);
+part_type_color2(particle_Player_Fly, c_white, c_yellow);
+
+
+
