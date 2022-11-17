@@ -3,7 +3,7 @@
 
 
 global.gameState = 0;
-audio_play_sound(sound_gamemusic, 10, 1);
+audio_resume_sound(sound_gamemusic);
 audio_stop_sound(sound_waspmusic);
 global.bossCD = global.__BOSSSPAWNRATE
 
