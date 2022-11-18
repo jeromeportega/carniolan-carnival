@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sound_hit_flower_or_boss.wav",
-  "duration": 1.466667,
+  "soundFile": "sound_hit_flower_or_boss.mp3",
+  "duration": 1.62275,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
