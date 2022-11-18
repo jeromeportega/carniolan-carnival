@@ -7,3 +7,4 @@ if(shouldSpawnGoodies) {
 	if (random_range(0,1) <= honeyChance) instance_create_layer(x,y, "Instances", Honey);
 	if (random_range(0,1) <= miteChance) instance_create_layer(x,y, "Instances", Mites);
 }
+audio_play_sound(sound_flowerdeath, 2, 0);
