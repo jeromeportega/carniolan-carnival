@@ -4,7 +4,7 @@
 randomize();
 
 //Debug related
-global.debug = true;
+global.debug = false;
 lastFrame = 0;
 currFrame = current_time;
 trackPos = 0;
@@ -17,15 +17,15 @@ global.MINPACE  = 5;
 
 //Define the boundary the player object can move within
 global.HORIZONTAL_BUFFER = 34;
-global.LOWER_BOUND = room_height - 128;
-global.UPPER_BOUND = room_height - 2 * 128;
+global.LOWER_BOUND = room_height - 256;
+global.UPPER_BOUND = room_height - 2 * 256;
 
 //State vars
 pointsPerSec = 100
 global.gameState = 0;
 global.__BOSSSPAWNRATE = global.FRAMERATE * 60 * 2;
 global.bossCD = global.__BOSSSPAWNRATE;
-paceSlope = (global.MAXPACE - global.MINPACE)/(pointsPerSec*60*10); // Reach max diff in 10 minutes
+paceSlope = (global.MAXPACE - global.MINPACE)/(pointsPerSec*60*30); // Reach max diff in 10 minutes
 
 //Global variables
 global.pace = global.MINPACE;
