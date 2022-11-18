@@ -10,5 +10,3 @@ if(shouldSpawnGoodies) {
 
 part_particles_create(ParticleManager.partSys, x, y, ParticleManager.particle_Flower_Small, 100);
 part_particles_create(ParticleManager.partSys, x, y, ParticleManager.particle_Flower_Big, 10);
-
-audio_play_sound(sound_sample, 1, false)
