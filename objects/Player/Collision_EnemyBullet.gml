@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 //If the player is ina damageable state, damage them
+
 if (playerState != playerStates.respawning && playerState != playerStates.invincible)
 {
 	global.lives--; //Takea  life

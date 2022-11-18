@@ -109,6 +109,7 @@ function setState(state) {
 		{
 			playerState = playerStates.respawning;
 			stateDuration = global.respawnTIME; //2 second
+			audio_play_sound(sound_enemybullet_ouch, 2, 0);
 		}
 		FIRERATE = __NORMAL_FIRERATE;
 		break;
@@ -117,6 +118,7 @@ function setState(state) {
 		playerState = playerStates.invincible;
 		stateDuration = global.invincibleTIME;
 		FIRERATE = __NORMAL_FIRERATE;
+		audio_play_sound(sound_invinicible, 10, 0);
 		break;
 		
 	case playerStates.rapidfire: //We are allowing powerUp chaining, its a buff to the player although unlikely/impossible to happen
@@ -125,6 +127,7 @@ function setState(state) {
 			shootCD = 0; //When entering the state we refresh the cooldown to have an immediate impact
 			FIRERATE /= rateIncrease; //We are increasing the firerate bya factor of rateIncrease
 		}
+		audio_play_sound(sound_rapidfire, 10, 0);
 		playerState = playerStates.rapidfire;
 		stateDuration = global.sprayingTIME;
 		break;

@@ -4,6 +4,7 @@
 //Increment score and remove honey
 global.score++;
 instance_destroy(other, true);
+audio_play_sound(sound_honey, 2, 0);
 
 
 
