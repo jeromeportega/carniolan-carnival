@@ -3,6 +3,8 @@
 
 
 global.gameState = 0;
+audio_resume_sound(sound_gamemusic);
+audio_stop_sound(sound_waspmusic);
 global.bossCD = global.__BOSSSPAWNRATE
 
 for (var i = 0; i < 20; i++) {
@@ -10,3 +12,5 @@ for (var i = 0; i < 20; i++) {
 	
 	honey.hspeed = random_range(-8, 8)
 }
+audio_play_sound(sound_waspdeath, 2, 0 );
+

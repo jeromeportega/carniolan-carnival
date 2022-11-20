@@ -12,6 +12,8 @@ if (global.gameState == 0){
 	if (global.bossCD == 0){
 		global.gameState = 1
 		spawnBoss();
+		audio_pause_sound(sound_gamemusic);
+		audio_play_sound(sound_waspmusic, 10, 1);
 	}
 	else{
 		global.bossCD = max(0, global.bossCD-1);

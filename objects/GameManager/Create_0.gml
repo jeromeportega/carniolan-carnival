@@ -132,3 +132,6 @@ if (global.debug) {
 	instance_create_layer(896, 736, "Instances", testingIncrementer);
 	instance_create_layer(896, 992, "Instances", testingDecrementer);
 }
+
+audio_play_sound(sound_gamemusic, 10, 1);
+
