@@ -49,9 +49,6 @@ powerUpCD = POWER_UP_SPAWNRATE;
 FLOWER_SPAWNRATE = global.FRAMERATE * 1.5; //For testing 10 is aggressive
 flowerCD = FLOWER_SPAWNRATE
 
-paused = false
-paused_surface = -1
-
 
 //Enums go here to be run once
 enum playerStates {
@@ -69,23 +66,23 @@ enum powerUps {
 
 //Resets the relevant variables to starta new game, and clears the gameRoom of all unimportant objects
 function restartGame(){
-global.pace = global.MINPACE;
-global.lives = 3;
-global.score = 0;
-global.distance = 0;
-global.isPaused = false;
+	global.pace = global.MINPACE;
+	global.lives = 3;
+	global.score = 0;
+	global.distance = 0;
+	global.isPaused = false;
 
-instance_destroy(Player, true);
-instance_destroy(Flower, true);
-instance_destroy(Honey, true);
-instance_destroy(Bullet, true);
-instance_destroy(EnemyBullet, true);
-instance_destroy(Mites, true);
-instance_destroy(HummingBird, true);
-instance_destroy(Wasp, true);
-instance_destroy(PowerUp, true);
+	instance_destroy(Player, true);
+	instance_destroy(Flower, true);
+	instance_destroy(Honey, true);
+	instance_destroy(Bullet, true);
+	instance_destroy(EnemyBullet, true);
+	instance_destroy(Mites, true);
+	instance_destroy(HummingBird, true);
+	instance_destroy(Wasp, true);
+	instance_destroy(PowerUp, true);
 
-instance_create_layer(x, y,"Instances", Player);
+	instance_create_layer(x, y,"Instances", Player);
 }
 
 //Creates a new powerUp saves its ID and type, then deactivates it to spawn it ata random location at the right moment. 
@@ -134,4 +131,12 @@ if (global.debug) {
 }
 
 audio_play_sound(sound_gamemusic, 10, 1);
+
+function pauseGame() {
+	global.isPaused = true
+}
+
+function unpauseGame() {
+	global.isPaused = false
+}
 

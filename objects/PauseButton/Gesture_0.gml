@@ -1,4 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-GameManager.paused = true
+if (global.isPaused) {
+	GameManager.unpauseGame()	
+} else {
+	GameManager.pauseGame()
+}
