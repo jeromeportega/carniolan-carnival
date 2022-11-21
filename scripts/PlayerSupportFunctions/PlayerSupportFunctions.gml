@@ -3,12 +3,11 @@
 
 //Spawns a bullet at player position and sets its speed an direction
 function shoot(spd, dir) {
-	var bullet = instance_create_layer(x, y, "Instances", Bullet);
-	with (bullet) {
-		speed = spd; //set its new speed
-		direction = dir; //new direction
-		image_angle = dir; //make bullet face forward
-	}
+	instance_create_layer(x, y, "Instances", Bullet, {
+		speed: spd,
+		direction: dir,
+		image_angle: dir
+	});
 }
 
 //Checks ifa bullet should be fired, if so fires and resets cooldown otherwise decrements cooldown

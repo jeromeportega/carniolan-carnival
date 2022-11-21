@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if (global.isPaused) {
+	exit
+}
+
+
 //If we are homing and player exists, then adjust direction to chase player
 if (homing && instance_exists(Player)) {
 	//Move directly towards the player

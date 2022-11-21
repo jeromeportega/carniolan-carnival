@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 if (global.isPaused) {
+	speed = 0
 	exit
+} else {
+	speed = unpause_speed
 }
-
-//If drag ends then set the target to player's current location
-targetX = x;
