@@ -11,6 +11,9 @@ targetX = room_width/2; //Target location for movement starts middle screen
 insDebug1 = 0;
 insDebug2 = 0;
 
+// Used for pausing the game
+unpause_speed = 0
+
 //Shooting variables
 __NORMAL_FIRERATE = global.FRAMERATE/1.5
 FIRERATE = __NORMAL_FIRERATE; //Shots per second

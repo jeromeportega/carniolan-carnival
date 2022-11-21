@@ -16,6 +16,5 @@ if (global.debug) {
 	draw_text(x_align, 240 + y_offset, "FlowerCD: " + string(flowerCD/global.FRAMERATE));
 	draw_text(x_align, 280 + y_offset, "PowerUpCD: " + string(powerUpCD/global.FRAMERATE));
 	draw_text(x_align, 320 + y_offset, "BossCD: " + string(global.bossCD/global.FRAMERATE));
+	draw_text(x_align, 360 + y_offset, "Room: " + string(room == Room1));
 }
-
-

@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if (global.isPaused) {
+	exit
+}
+
 //Tracking the gameDistance traveled as a means of trackign score and increasing difficulty
 global.distance += pointsPerSec/global.FRAMERATE;
 

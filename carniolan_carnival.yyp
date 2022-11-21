@@ -40,6 +40,7 @@
     {"id":{"name":"sound_enemybullet_ouch","path":"sounds/sound_enemybullet_ouch/sound_enemybullet_ouch.yy",},"order":5,},
     {"id":{"name":"s_Flower","path":"sprites/s_Flower/s_Flower.yy",},"order":2,},
     {"id":{"name":"WaspMovement","path":"scripts/WaspMovement/WaspMovement.yy",},"order":2,},
+    {"id":{"name":"PauseButton","path":"objects/PauseButton/PauseButton.yy",},"order":15,},
     {"id":{"name":"sound_waspdeath","path":"sounds/sound_waspdeath/sound_waspdeath.yy",},"order":0,},
     {"id":{"name":"s_EnemyBullet","path":"sprites/s_EnemyBullet/s_EnemyBullet.yy",},"order":4,},
     {"id":{"name":"sound_honey","path":"sounds/sound_honey/sound_honey.yy",},"order":3,},
@@ -47,6 +48,7 @@
     {"id":{"name":"s_Plus","path":"sprites/s_Plus/s_Plus.yy",},"order":9,},
     {"id":{"name":"Honey","path":"objects/Honey/Honey.yy",},"order":7,},
     {"id":{"name":"Spr_YoYo_textbox","path":"sprites/Spr_YoYo_textbox/Spr_YoYo_textbox.yy",},"order":2,},
+    {"id":{"name":"s_PauseButton","path":"sprites/s_PauseButton/s_PauseButton.yy",},"order":11,},
     {"id":{"name":"Obj_YoYo_text","path":"objects/Obj_YoYo_text/Obj_YoYo_text.yy",},"order":1,},
     {"id":{"name":"Obj_AdMob_Rewarded","path":"objects/Obj_AdMob_Rewarded/Obj_AdMob_Rewarded.yy",},"order":4,},
     {"id":{"name":"PlayerStateMachine","path":"scripts/PlayerStateMachine/PlayerStateMachine.yy",},"order":0,},
@@ -115,7 +117,7 @@
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
   ],
   "TextureGroups": [
-    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","isScaled":true,"compressFormat":"bz2","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,},
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","isScaled":true,"compressFormat":"bz2","loadType":"default","directory":"","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"AdMob Extension.docx","CopyToMask":-1,"filePath":"datafiles",},
@@ -124,6 +126,6 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"AdMob Extension.pdf","CopyToMask":-1,"filePath":"datafiles",},
   ],
   "MetaData": {
-    "IDEVersion": "2022.8.1.37",
+    "IDEVersion": "2022.9.1.51",
   },
 }
