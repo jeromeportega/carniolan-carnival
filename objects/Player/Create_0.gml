@@ -39,7 +39,7 @@ invFlashDamping = 30;
 invFlashBias = 0;
 
 //For Spraying state
-rateIncrease = 10; //The factor of increase in firerate during rapidFire
+rateIncrease = 5; //The factor of increase in firerate during rapidFire
 spread = 13; //The half angle of spread during rapid fire, 10 means a 20 degree total spread centered around 90 (Up)
 
 playerState = playerStates.normal;

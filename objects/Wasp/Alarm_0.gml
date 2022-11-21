@@ -5,6 +5,7 @@ if (global.isPaused) {
 	exit
 }
 
+var spread = 250;
 // Triple spread shot
 instance_create_layer(x+140, y+150, "Instances", EnemyBullet, {
 	direction: point_direction(x, y, Player.x, Player.y),
@@ -12,14 +13,14 @@ instance_create_layer(x+140, y+150, "Instances", EnemyBullet, {
 	image_angle: direction
 });
 instance_create_layer(x+140, y+150, "Instances", EnemyBullet, {
-	direction: point_direction(x, y, Player.x+180, Player.y+180),
+	direction: point_direction(x, y, Player.x+spread, Player.y+spread),
 	speed: 6 * global.pace/global.MINPACE,
 	image_angle: direction
 });
 instance_create_layer(x+140, y+150, "Instances", EnemyBullet, {
-	direction: point_direction(x, y, Player.x-180, Player.y-180),
+	direction: point_direction(x, y, Player.x-spread, Player.y-spread),
 	speed: 6 * global.pace/global.MINPACE,
 	image_angle: direction
 });
 
-alarm[0] = room_speed;
+alarm[0] = room_speed * 4/(global.pace/global.MINPACE);
