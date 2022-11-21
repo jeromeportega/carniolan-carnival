@@ -4,7 +4,11 @@
 if (global.isPaused) {
 	exit
 }
-
+else if (global.lives <= 0) {
+	global.gameOver = true;
+	pauseGame();
+	
+}
 //Tracking the gameDistance traveled as a means of trackign score and increasing difficulty
 global.distance += pointsPerSec/global.FRAMERATE;
 

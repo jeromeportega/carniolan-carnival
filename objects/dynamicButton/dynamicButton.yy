@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "PauseButton",
+  "name": "dynamicButton",
   "spriteId": {
-    "name": "s_PauseButton",
-    "path": "sprites/s_PauseButton/s_PauseButton.yy",
+    "name": "s_Continue",
+    "path": "sprites/s_Continue/s_Continue.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,13 +25,12 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":13,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "MenuButtons",
+    "path": "folders/Objects/MenuButtons.yy",
   },
 }

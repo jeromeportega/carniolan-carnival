@@ -34,6 +34,7 @@ global.score = 0;
 global.distance = 0;
 
 global.isPaused = false;
+global.gameOver = false;
 
 global.infectedTIME = global.FRAMERATE * 5; // Ten second infection at start;
 global.respawnTIME = global.FRAMERATE *1;
@@ -70,19 +71,20 @@ function restartGame(){
 	global.lives = 3;
 	global.score = 0;
 	global.distance = 0;
-	global.isPaused = false;
 
-	instance_destroy(Player, true);
-	instance_destroy(Flower, true);
-	instance_destroy(Honey, true);
-	instance_destroy(Bullet, true);
-	instance_destroy(EnemyBullet, true);
-	instance_destroy(Mites, true);
-	instance_destroy(HummingBird, true);
-	instance_destroy(Wasp, true);
-	instance_destroy(PowerUp, true);
+	instance_destroy(Player, false);
+	instance_destroy(Flower, false);
+	instance_destroy(Honey, false);
+	instance_destroy(Bullet, false);
+	instance_destroy(EnemyBullet, false);
+	instance_destroy(Mites, false);
+	instance_destroy(HummingBird, false);
+	instance_destroy(Wasp, false);
+	instance_destroy(PowerUp, false);
 
 	instance_create_layer(x, y,"Instances", Player);
+	
+	unpauseGame();
 }
 
 //Creates a new powerUp saves its ID and type, then deactivates it to spawn it ata random location at the right moment. 
@@ -132,11 +134,22 @@ if (global.debug) {
 
 audio_play_sound(sound_gamemusic, 10, 1);
 
+myRestartButton = instance_create_layer(room_width/2, room_height/2, "Instances", restartButton);
+myDynamicButton = instance_create_layer(room_width/2, room_height/2 + 128, "Instances", dynamicButton);
+
+instance_deactivate_object(myRestartButton);
+instance_deactivate_object(myDynamicButton);
+
+
 function pauseGame() {
 	global.isPaused = true
+	instance_activate_object(myRestartButton);
+	instance_activate_object(myDynamicButton);
 }
 
 function unpauseGame() {
 	global.isPaused = false
+	instance_deactivate_object(myRestartButton);
+	instance_deactivate_object(myDynamicButton);
 }
 

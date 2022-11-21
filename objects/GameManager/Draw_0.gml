@@ -18,3 +18,8 @@ if (global.debug) {
 	draw_text(x_align, 320 + y_offset, "BossCD: " + string(global.bossCD/global.FRAMERATE));
 	draw_text(x_align, 360 + y_offset, "Room: " + string(room == Room1));
 }
+
+
+//Drawing lives counter
+draw_sprite(s_Player, 0, 64, 64);
+draw_text(96, 64, "  X  " + string(global.lives));
