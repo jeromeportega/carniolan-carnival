@@ -71,6 +71,7 @@ function restartGame(){
 	global.lives = 3;
 	global.score = 0;
 	global.distance = 0;
+	global.gameOver = false;
 
 	instance_destroy(Player, false);
 	instance_destroy(Flower, false);
