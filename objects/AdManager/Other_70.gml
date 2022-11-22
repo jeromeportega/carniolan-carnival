@@ -160,9 +160,10 @@ switch(async_load[?"type"])
 	// AdMob_RewardedVideo triggered reward event
 	case "AdMob_RewardedVideo_OnReward":
 		// At this point you can reward the user.
-		show_message_async("User Earned Reward");
-		global.lives += 5;
+		show_message_async("You earned 10 more lives!");
+		global.lives += 10;
 		//Not gameover
+		global.gameOver = false;
 		break;
 
 }

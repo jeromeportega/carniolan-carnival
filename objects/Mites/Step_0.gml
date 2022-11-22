@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 if (global.isPaused) {
+	speed = 0
 	exit
 }
 
@@ -13,6 +14,9 @@ if (homing && instance_exists(Player)) {
 	image_angle = direction;
 	homingDuration--;
 	if (homingDuration <= 0) homing = false; //Cancel homing after duration
+}
+else {
+	speed = global.pace;
 }
 
 

@@ -3,10 +3,11 @@
 
 
 if (global.gameOver) {
-	image_index = s_watch;
+	sprite_index = s_watch;
+	
 }
 else {
-	image_index = s_Continue;	
+	sprite_index = s_Continue;	
 }
 
 draw_self();
