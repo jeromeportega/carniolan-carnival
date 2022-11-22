@@ -6,16 +6,34 @@ if (global.isPaused) {
 	exit
 }
 
-vspeed = global.pace;
+speed = global.pace*spdMult;
+
 if (y >= deletionBoundary) instance_destroy(id, false);
-if (hspeed != 0) hspeed = sign(hspeed)* max((abs(hspeed) - breaking), 0);
+
+
+if direction != 270 {
+	if direction >= 90 {
+		direction = min(270, direction + dirBreak);
+	}
+	else if direction > 270 {
+		direction = max(270, direction - dirBreak);	
+	}
+	else if direction > 0 {
+		direction = max(0, direction - dirBreak);	
+	}
+	else {
+		direction = 360;	
+	}
+}
+
+
 if (x < 32) { //32 is half the width of sprite
 	x = 32
-	hspeed = 0
+	move_towards_point(room_width/2, room_height, global.pace*spdMult);
 }; //cant go off left side of screen
 else if ( x > room_width - 32) {
 	x = room_width - 32;
-	hspeed = 0;
+	move_towards_point(room_width/2, room_height, global.pace*spdMult);
 };
 	
 
