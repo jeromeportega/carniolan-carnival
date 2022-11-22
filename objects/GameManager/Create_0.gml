@@ -146,11 +146,15 @@ function pauseGame() {
 	global.isPaused = true
 	instance_activate_object(myRestartButton);
 	instance_activate_object(myDynamicButton);
+	audio_pause_sound(sound_gamemusic);
+	audio_pause_sound(sound_waspmusic);
 }
 
 function unpauseGame() {
 	global.isPaused = false
 	instance_deactivate_object(myRestartButton);
 	instance_deactivate_object(myDynamicButton);
+	audio_resume_sound(sound_gamemusic);
+	audio_resume_sound(sound_waspmusic);
 }
 
