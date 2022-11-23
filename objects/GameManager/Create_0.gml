@@ -137,10 +137,10 @@ if (global.debug) {
 
 audio_play_sound(sound_gamemusic, 10, 1);
 
-myRestartButton = instance_create_layer(room_width/2, room_height/2, "Instances", restartButton);
-myDynamicButton = instance_create_layer(room_width/2, room_height/2 + 128, "Instances", dynamicButton);
-myDebugButton1 = instance_create_layer(room_width/2 - 200, room_height/2 - 128, "Instances", secretButtonOne);
-myDebugButton2 = instance_create_layer(room_width/2 + 200, room_height/2 - 128, "Instances", secretButtonTwo);
+myRestartButton = instance_create_layer(room_width/2, room_height/2, "GUI", restartButton);
+myDynamicButton = instance_create_layer(room_width/2, room_height/2 + 128, "GUI", dynamicButton);
+myDebugButton1 = instance_create_layer(room_width/2 - 200, room_height/2 - 128, "GUI", secretButtonOne);
+myDebugButton2 = instance_create_layer(room_width/2 + 200, room_height/2 - 128, "GUI", secretButtonTwo);
 
 
 instance_deactivate_object(myRestartButton);
