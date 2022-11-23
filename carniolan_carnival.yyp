@@ -13,6 +13,7 @@
     {"id":{"name":"s_debugButton","path":"sprites/s_debugButton/s_debugButton.yy",},"order":15,},
     {"id":{"name":"Font_YoYo_50","path":"fonts/Font_YoYo_50/Font_YoYo_50.yy",},"order":2,},
     {"id":{"name":"Obj_YoYo_button","path":"objects/Obj_YoYo_button/Obj_YoYo_button.yy",},"order":0,},
+    {"id":{"name":"s_Player_old","path":"sprites/s_Player_old/s_Player_old.yy",},"order":16,},
     {"id":{"name":"respawnBlink","path":"shaders/respawnBlink/respawnBlink.yy",},"order":0,},
     {"id":{"name":"s_Honey","path":"sprites/s_Honey/s_Honey.yy",},"order":1,},
     {"id":{"name":"GameManager","path":"objects/GameManager/GameManager.yy",},"order":1,},
