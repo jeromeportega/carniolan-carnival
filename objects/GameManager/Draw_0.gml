@@ -6,7 +6,7 @@
 if (global.debug) {
 	draw_set_font(LivesFont);
 	var x_align = 50;
-	var y_offset = 50;
+	var y_offset = 150;
 	draw_text(x_align, 0 + y_offset, "FPS: " + string((last5FPS[0]+last5FPS[1]+last5FPS[2]+last5FPS[3]+last5FPS[4])/5));
 	draw_text(x_align, 40 + y_offset, "Lives: " + string(global.lives));
 	draw_text(x_align, 80 + y_offset, "Score: " + string(global.score));

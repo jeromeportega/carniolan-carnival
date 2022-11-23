@@ -5,6 +5,8 @@ randomize();
 
 //Debug related
 global.debug = false;
+global.debugToggle1 = false;
+global.debugToggle2 = false;
 lastFrame = 0;
 currFrame = current_time;
 trackPos = 0;
@@ -129,23 +131,29 @@ function spawnBoss() {
 
 
 if (global.debug) {
-	instance_create_layer(896, 736, "Instances", testingIncrementer);
-	instance_create_layer(896, 992, "Instances", testingDecrementer);
+	//instance_create_layer(896, 736, "Instances", testingIncrementer);
+	//instance_create_layer(896, 992, "Instances", testingDecrementer);
 }
 
 audio_play_sound(sound_gamemusic, 10, 1);
 
 myRestartButton = instance_create_layer(room_width/2, room_height/2, "Instances", restartButton);
 myDynamicButton = instance_create_layer(room_width/2, room_height/2 + 128, "Instances", dynamicButton);
+myDebugButton1 = instance_create_layer(room_width/2 - 200, room_height/2 - 128, "Instances", secretButtonOne);
+myDebugButton2 = instance_create_layer(room_width/2 + 200, room_height/2 - 128, "Instances", secretButtonTwo);
+
 
 instance_deactivate_object(myRestartButton);
 instance_deactivate_object(myDynamicButton);
-
+instance_deactivate_object(myDebugButton1);
+instance_deactivate_object(myDebugButton2);
 
 function pauseGame() {
 	global.isPaused = true
 	instance_activate_object(myRestartButton);
 	instance_activate_object(myDynamicButton);
+	instance_activate_object(myDebugButton1);
+	instance_activate_object(myDebugButton2);
 	audio_pause_sound(sound_gamemusic);
 	audio_pause_sound(sound_waspmusic);
 }
@@ -154,6 +162,8 @@ function unpauseGame() {
 	global.isPaused = false
 	instance_deactivate_object(myRestartButton);
 	instance_deactivate_object(myDynamicButton);
+	instance_deactivate_object(myDebugButton1);
+	instance_deactivate_object(myDebugButton2);
 	audio_resume_sound(sound_gamemusic);
 	audio_resume_sound(sound_waspmusic);
 }

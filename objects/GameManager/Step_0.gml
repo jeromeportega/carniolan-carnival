@@ -2,6 +2,11 @@
 // You can write your code in this editor
 
 if (global.isPaused) {
+	if global.debugToggle1 and global.debugToggle2 {
+		global.debug = !global.debug;
+		global.debugToggle1 = false;
+		global.debugToggle2 = false;
+	}
 	exit
 }
 else if (global.lives <= 0) {
@@ -13,7 +18,7 @@ else if (global.lives <= 0) {
 global.distance += pointsPerSec/global.FRAMERATE;
 
 //If not in debug mode pace scales with distance, otherwise it is not scaled automatically for testing
-if (!global.debug) global.pace = global.MINPACE + paceSlope*global.distance;
+global.pace = min(global.MAXPACE, global.MINPACE + paceSlope*global.distance);
 
 if (global.gameState == 0){
 	handleFlowerSpawning();
