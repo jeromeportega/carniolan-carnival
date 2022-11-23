@@ -2,6 +2,9 @@
 // You can write your code in this editor
 
 
+image_xscale = 2;
+image_yscale = 2;
+
 //Movement variables
 maxHSpeed = 10; //Max speed the player can move in normal state
 targetX = room_width/2; //Target location for movement starts middle screen

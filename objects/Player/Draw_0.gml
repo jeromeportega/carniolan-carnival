@@ -12,6 +12,6 @@ draw_self();
 shader_reset();
 
 //Drawing debug info for stateMachine
-draw_text(room_width/2, 100, string(playerState));
+//draw_text(room_width/2, 100, string(playerState));
 
 
