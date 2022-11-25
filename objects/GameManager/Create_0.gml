@@ -25,7 +25,7 @@ global.UPPER_BOUND = room_height - 2 * 256;
 //State vars
 pointsPerSec = 100
 global.gameState = 0;
-global.__BOSSSPAWNRATE = global.FRAMERATE * 60 * 2;
+global.__BOSSSPAWNRATE = global.FRAMERATE * 60 * 1.5;
 global.bossCD = global.__BOSSSPAWNRATE;
 paceSlope = (global.MAXPACE - global.MINPACE)/(pointsPerSec*60*30); // Reach max diff in 10 minutes
 
@@ -38,7 +38,7 @@ global.distance = 0;
 global.isPaused = false;
 global.gameOver = false;
 
-global.infectedTIME = global.FRAMERATE * 5; // Ten second infection at start;
+global.infectedTIME = global.FRAMERATE * 3; // Ten second infection at start;
 global.respawnTIME = global.FRAMERATE *1;
 global.invincibleTIME = global.FRAMERATE * 5;
 global.sprayingTIME = global.FRAMERATE * 3;
@@ -74,6 +74,9 @@ function restartGame(){
 	global.score = 0;
 	global.distance = 0;
 	global.gameOver = false;
+	
+	//Ad stuff
+	global.numRevives = 0;
 
 	instance_destroy(Player, false);
 	instance_destroy(Flower, false);

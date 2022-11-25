@@ -25,6 +25,7 @@
     {"id":{"name":"LivesFont","path":"fonts/LivesFont/LivesFont.yy",},"order":0,},
     {"id":{"name":"Obj_AdMob_Volume","path":"objects/Obj_AdMob_Volume/Obj_AdMob_Volume.yy",},"order":6,},
     {"id":{"name":"s_PowerUp","path":"sprites/s_PowerUp/s_PowerUp.yy",},"order":8,},
+    {"id":{"name":"sound_gameover","path":"sounds/sound_gameover/sound_gameover.yy",},"order":9,},
     {"id":{"name":"Obj_AdMob","path":"objects/Obj_AdMob/Obj_AdMob.yy",},"order":0,},
     {"id":{"name":"Spr_YoYo_button","path":"sprites/Spr_YoYo_button/Spr_YoYo_button.yy",},"order":1,},
     {"id":{"name":"PowerUp","path":"objects/PowerUp/PowerUp.yy",},"order":9,},

@@ -6,7 +6,11 @@
 // Debug variables (used in draw event)
 status = "UNKNOWN";
 type = "UNKNOWN";
-
+global.adRoll = 1;
+global.rewardedLimiter = 1000 * 60; //One minute
+global.lastAdTime = -global.rewardedLimiter;
+global.numRevives = 0;
+global.baseOfferChance = .75;
 /*
 	The first step to configure AdMob with your application/game is to get the
 	unique string ad block ids from the admob development console for you app.

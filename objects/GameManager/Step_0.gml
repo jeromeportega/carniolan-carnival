@@ -11,6 +11,9 @@ if (global.isPaused) {
 }
 else if (global.lives <= 0) {
 	global.gameOver = true;
+	global.adRoll = random(1);
+	audio_play_sound(sound_gamemusic, 2, 0);
+	//global.adRoll = 0; //For debug
 	pauseGame();
 	
 }

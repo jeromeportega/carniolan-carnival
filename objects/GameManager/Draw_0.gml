@@ -17,6 +17,8 @@ if (global.debug) {
 	draw_text(x_align, 280 + y_offset, "PowerUpCD: " + string(powerUpCD/global.FRAMERATE));
 	draw_text(x_align, 320 + y_offset, "BossCD: " + string(global.bossCD/global.FRAMERATE));
 	draw_text(x_align, 360 + y_offset, "Room: " + string(room == Room1));
+	draw_text(x_align, 400 + y_offset, "RewardedLoaded: " + string(AdMob_RewardedVideo_IsLoaded()));
+	draw_text(x_align, 440 + y_offset, "LimiterTime: " + string(current_time - global.lastAdTime));
 }
 
 
