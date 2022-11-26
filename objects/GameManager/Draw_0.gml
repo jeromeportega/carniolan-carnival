@@ -26,3 +26,9 @@ if (global.debug) {
 draw_sprite_ext(s_Player, 0, 64, 64, 2, 2, 0, c_white, 1);
 draw_set_font(LivesFont)
 draw_text(96, 64, "  X  " + string(global.lives));
+
+if global.isPaused {
+	
+	draw_text(200, room_height/2 - 150, string(ds_list_find_value(factsList, factPos)));
+	
+}

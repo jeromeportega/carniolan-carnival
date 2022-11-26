@@ -15,8 +15,8 @@ rotSpeed = random_range(-1,1);
 image_index = irandom_range(0, image_number);
 image_speed = 0;
 
-image_xscale = size;
-image_yscale = size;
+image_xscale = size*8;
+image_yscale = size*8;
 randomize(); //for testing only
 
 

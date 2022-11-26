@@ -2,6 +2,17 @@
 // You can write your code in this editor
 
 randomize();
+factsFile = file_text_open_read("beefacts.json");
+facts = file_text_read_string(factsFile);
+file_text_close(factsFile);
+facts = json_parse(facts).BeeFacts;
+
+factsList = ds_list_create();
+
+for (var i = 0; i < array_length(facts); i++) {
+	ds_list_add(factsList, facts[i]);
+}
+
 
 //Debug related
 global.debug = false;
@@ -17,6 +28,10 @@ global.FRAMERATE = 60;
 global.MAXPACE = 30;
 global.MINPACE  = 5;
 global.bckgrnd = 1;
+
+__factCD = global.FRAMERATE*10;
+factCD = __factCD;
+factPos = 0; 
 
 //Define the boundary the player object can move within
 global.HORIZONTAL_BUFFER = 34;

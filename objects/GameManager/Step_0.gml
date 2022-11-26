@@ -7,6 +7,19 @@ if (global.isPaused) {
 		global.debugToggle1 = false;
 		global.debugToggle2 = false;
 	}
+	
+	if factCD == 0 {
+		factPos++;
+		factCD = __factCD;
+		if factPos >= ds_list_size(factsList) {
+			factPos = 0;
+			ds_list_shuffle(factsList);
+		}
+	}
+	else{
+		factCD = max(0, factCD - 1);
+	}
+	
 	exit;
 }
 else if (global.lives <= 0) {
