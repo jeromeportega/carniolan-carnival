@@ -28,7 +28,7 @@ pointsPerSec = 100
 global.gameState = 0;
 global.__BOSSSPAWNRATE = global.FRAMERATE * 60 * 1.5;
 global.bossCD = global.__BOSSSPAWNRATE;
-paceSlope = (global.MAXPACE - global.MINPACE)/(pointsPerSec*60*1); // Reach max diff in 1 minutes
+paceSlope = (global.MAXPACE - global.MINPACE)/(pointsPerSec*60*10); // Reach max diff in 10 minutes
 
 //Global variables
 global.pace = global.MINPACE;
@@ -77,7 +77,7 @@ function restartGame(){
 	global.gameOver = false;
 	global.gameState = 0;
 	global.bossCD = global.__BOSSSPAWNRATE;
-	global.bckgrnd = 1;
+	global.bckgrnd = 5;
 	//Ad stuff
 	global.numRevives = 0;
 

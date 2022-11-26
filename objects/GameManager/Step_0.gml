@@ -19,7 +19,7 @@ else if (global.lives <= 0) {
 	exit;
 }
 
-global.bckgrnd = 2*global.pace/global.MAXPACE;
+global.bckgrnd = 5*global.pace/global.MAXPACE;
 layer_vspeed(layer_get_id("Background"), global.bckgrnd);
 //Tracking the gameDistance traveled as a means of trackign score and increasing difficulty
 global.distance += pointsPerSec/global.FRAMERATE;
