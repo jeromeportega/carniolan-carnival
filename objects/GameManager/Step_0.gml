@@ -7,7 +7,7 @@ if (global.isPaused) {
 		global.debugToggle1 = false;
 		global.debugToggle2 = false;
 	}
-	exit
+	exit;
 }
 else if (global.lives <= 0) {
 	global.gameOver = true;
@@ -16,8 +16,11 @@ else if (global.lives <= 0) {
 	audio_play_sound(sound_gameover, 2, 0);
 	//global.adRoll = 0; //For debug
 	pauseGame();
-	
+	exit;
 }
+
+global.bckgrnd = 2*global.pace/global.MAXPACE;
+layer_vspeed(layer_get_id("Background"), global.bckgrnd);
 //Tracking the gameDistance traveled as a means of trackign score and increasing difficulty
 global.distance += pointsPerSec/global.FRAMERATE;
 

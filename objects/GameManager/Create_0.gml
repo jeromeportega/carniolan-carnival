@@ -16,6 +16,7 @@ last5FPS = [60, 60, 60, 60, 60]
 global.FRAMERATE = 60;
 global.MAXPACE = 30;
 global.MINPACE  = 5;
+global.bckgrnd = 1;
 
 //Define the boundary the player object can move within
 global.HORIZONTAL_BUFFER = 34;
@@ -27,7 +28,7 @@ pointsPerSec = 100
 global.gameState = 0;
 global.__BOSSSPAWNRATE = global.FRAMERATE * 60 * 1.5;
 global.bossCD = global.__BOSSSPAWNRATE;
-paceSlope = (global.MAXPACE - global.MINPACE)/(pointsPerSec*60*30); // Reach max diff in 10 minutes
+paceSlope = (global.MAXPACE - global.MINPACE)/(pointsPerSec*60*1); // Reach max diff in 1 minutes
 
 //Global variables
 global.pace = global.MINPACE;
@@ -76,7 +77,7 @@ function restartGame(){
 	global.gameOver = false;
 	global.gameState = 0;
 	global.bossCD = global.__BOSSSPAWNRATE;
-	
+	global.bckgrnd = 1;
 	//Ad stuff
 	global.numRevives = 0;
 
@@ -155,6 +156,7 @@ instance_deactivate_object(myDebugButton2);
 
 function pauseGame() {
 	global.isPaused = true
+	layer_vspeed(layer_get_id("Background"), 0);
 	instance_activate_object(myRestartButton);
 	instance_activate_object(myDynamicButton);
 	instance_activate_object(myDebugButton1);
@@ -165,6 +167,7 @@ function pauseGame() {
 
 function unpauseGame() {
 	global.isPaused = false
+	layer_vspeed(layer_get_id("Background"), global.bckgrnd);
 	instance_deactivate_object(myRestartButton);
 	instance_deactivate_object(myDynamicButton);
 	instance_deactivate_object(myDebugButton1);
