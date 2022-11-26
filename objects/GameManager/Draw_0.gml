@@ -23,7 +23,7 @@ if (global.debug) {
 
 
 //Drawing lives counter
-draw_sprite_ext(s_Player, 0, 64, 64, 2, 2, 0, c_white, 1);
+draw_sprite_ext(s_Player, 0, 64, 64, 4, 4, 0, c_white, 1);
 draw_set_font(LivesFont)
 draw_text(96, 64, "  X  " + string(global.lives));
 

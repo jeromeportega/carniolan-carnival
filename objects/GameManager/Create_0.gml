@@ -194,27 +194,21 @@ function unpauseGame() {
 
 function factFormat(index) {
 	var og = ds_list_find_value(factsList, index);
-	var threshold = 15;
-	var lastSpace = 0;
+	var threshold = 30;
 	var result = "";
+	var count = 1;
 	for (var i = 1; i <= string_length(og); i++) {
-		
-		if i + threshold > string_length(og) {
-			result += string_copy(og, i, string_length(og));
-			break;
+		var curr = string_char_at(og, i);
+		if threshold - count <= 5 and curr == " " {
+			result += "\n"
+			count = 1
 		}
-		
-		var temp = string_copy(og, i, min(string_length(og), i + threshold));
-		lastSpace = string_last_pos(" ", temp);
-		if string_char_at(temp, string_length(temp)) != " " {
-			result += string_copy(temp, 1, lastSpace-1) + "\n";
-			i += lastSpace - 1;
+		else result += curr;
+		if count % threshold == 0 {
+			result += "\n";
+			count = 1;
 		}
-		else {
-			result += string_copy(temp, 1, string_length(temp)-1) + "\n";
-			i += threshold;
-		}
-		
+		else count++;
 	}
 	return result;
 }
