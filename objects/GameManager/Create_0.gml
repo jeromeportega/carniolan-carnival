@@ -74,6 +74,8 @@ function restartGame(){
 	global.score = 0;
 	global.distance = 0;
 	global.gameOver = false;
+	global.gameState = 0;
+	global.bossCD = global.__BOSSSPAWNRATE;
 	
 	//Ad stuff
 	global.numRevives = 0;
