@@ -1,0 +1,57 @@
+{
+  "Bee Facts": [
+    {
+      "id": "1",
+      "fact": "Honey bees are great flyers. They fly at a speed of around 25km per hour and beat their wings 200 times per second.",
+    },
+    {
+      "id": "2",
+      "fact": "The average worker bee lives for just five to six weeks. During this time, she’ll produce around a twelfth of a teaspoon of honey",
+    },
+	 {
+      "id": "3",
+      "fact": "To communicate information about food sources, they perform a 'waggle dance' where they move their body in a figure eight and wiggle around to indicate the direction of the food source",
+    },
+	 {
+      "id": "4",
+      "fact": "In some regions of the world, up to 90% of the bee populations have disappeared. This is known as 'colony collapse disorder'.",
+    },
+	 {
+      "id": "5",
+      "fact": "Honey bees are very important pollinators for flowers, fruit and vegetables. They transfer pollen, allowing the plant to produce seeds or fruit",
+    },
+	 {
+      "id": "6",
+      "fact": "There are about 20,000 species of bees around the world, and only 7 species are recognized as honey bees.",
+    },
+	 {
+      "id": "7",
+      "fact": "The honey bee brain is incredibly sophisticated, even though it's the size of a grain of sugar.",
+    },
+ {
+      "id": "8",
+      "fact": "All bees in a hive are aware of the presence of the queen bee. If she leaves the hive, every other bees knows it within 15 minutes.",
+    },
+	 {
+      "id": "9",
+      "fact": "Bees have been trained as bomb detectors and can detect hidden landmines.",
+    },
+	 {
+      "id": "10",
+      "fact": "One third of the food we eat is pollinated by honey bees.",
+    },
+		 {
+      "id": "11",
+      "fact": "Honey bees pollinate 80% of our agricultural crops.",
+    },
+		 {
+      "id": "12",
+      "fact": "The U.S population of honey bees has declined 60% since the 1940's.",
+    },
+			 {
+      "id": "13",
+      "fact": "Diseases and parasites contribute to the decline in bee populations. Threats include Varroa mites and German yellow jackets. ",
+    },
+
+  ]
+}
