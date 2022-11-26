@@ -11,6 +11,10 @@ honeyChance = 0.8; //honeyChance and mit8Chance will be global variables
 miteChance = 0.1*(1 + global.pace/global.MAXPACE);
 
 shouldSpawnGoodies  = true; //Used to track how the Flower was destroyed
+rotSpeed = random_range(-1,1);
+
+image_index = irandom_range(0, image_number);
+image_speed = 0;
 
 image_xscale = size;
 image_yscale = size;

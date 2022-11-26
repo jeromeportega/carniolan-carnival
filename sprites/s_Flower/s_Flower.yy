@@ -13,7 +13,7 @@
   "bbox_left": 10,
   "bbox_right": 244,
   "bbox_top": 11,
-  "bbox_bottom": 235,
+  "bbox_bottom": 248,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -29,6 +29,8 @@
   "gridY": 0,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a6503513-d4af-4cb8-a31a-74689c81eb2a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"63220936-53be-4d87-9cc7-c32b36fcb810",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"58a46250-248a-4d71-9eb5-88e84c6afff1",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -40,12 +42,14 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 3.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"ca33f7e6-2a63-4441-8fea-46331efe8656","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a6503513-d4af-4cb8-a31a-74689c81eb2a","path":"sprites/s_Flower/s_Flower.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6d3b6846-877b-4967-a259-7bf61f3c6bc6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"63220936-53be-4d87-9cc7-c32b36fcb810","path":"sprites/s_Flower/s_Flower.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"48a411e1-93c9-466d-ab49-afca189207e6","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"58a46250-248a-4d71-9eb5-88e84c6afff1","path":"sprites/s_Flower/s_Flower.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

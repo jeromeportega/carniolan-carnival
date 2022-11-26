@@ -8,7 +8,7 @@ if (global.isPaused) {
 
 vspeed = global.pace;
 if (hpValue <= 0) instance_destroy(id, true);
-
+image_angle += rotSpeed;
 
 
 
