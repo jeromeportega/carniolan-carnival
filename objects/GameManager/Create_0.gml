@@ -191,3 +191,31 @@ function unpauseGame() {
 	audio_resume_sound(sound_waspmusic);
 }
 
+
+function factFormat(index) {
+	var og = ds_list_find_value(factsList, index);
+	var threshold = 15;
+	var lastSpace = 0;
+	var result = "";
+	for (var i = 1; i <= string_length(og); i++) {
+		
+		if i + threshold > string_length(og) {
+			result += string_copy(og, i, string_length(og));
+			break;
+		}
+		
+		var temp = string_copy(og, i, min(string_length(og), i + threshold));
+		lastSpace = string_last_pos(" ", temp);
+		if string_char_at(temp, string_length(temp)) != " " {
+			result += string_copy(temp, 1, lastSpace-1) + "\n";
+			i += lastSpace - 1;
+		}
+		else {
+			result += string_copy(temp, 1, string_length(temp)-1) + "\n";
+			i += threshold;
+		}
+		
+	}
+	return result;
+}
+
