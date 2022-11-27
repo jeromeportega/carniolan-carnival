@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "restartButton",
   "spriteId": {
-    "name": "s_restart",
-    "path": "sprites/s_restart/s_restart.yy",
+    "name": "s_Restart",
+    "path": "sprites/s_Restart/s_Restart.yy",
   },
   "solid": false,
   "visible": true,
