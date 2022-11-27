@@ -41,7 +41,7 @@ global.UPPER_BOUND = room_height - 2 * 256;
 //State vars
 pointsPerSec = 100
 global.gameState = 0;
-global.__BOSSSPAWNRATE = global.FRAMERATE * 60 * 1.5;
+global.__BOSSSPAWNRATE = global.FRAMERATE * 60 * .25;
 global.bossCD = global.__BOSSSPAWNRATE;
 paceSlope = (global.MAXPACE - global.MINPACE)/(pointsPerSec*60*10); // Reach max diff in 10 minutes
 
@@ -80,7 +80,8 @@ enum playerStates {
 
 enum powerUps {
 	shield,
-	rapid	
+	rapid,
+	life
 }
 
 //Resets the relevant variables to starta new game, and clears the gameRoom of all unimportant objects

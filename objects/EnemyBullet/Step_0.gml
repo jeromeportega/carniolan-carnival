@@ -6,4 +6,5 @@ if (global.isPaused) {
 	exit
 } else {
 	speed = unpause_speed
+	image_angle = direction+90;
 }
