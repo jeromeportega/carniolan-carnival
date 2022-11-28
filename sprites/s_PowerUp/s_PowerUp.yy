@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "s_PowerUp",
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "type": 0,
   "origin": 4,
   "preMultiplyAlpha": false,
@@ -30,6 +30,7 @@
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a0d42429-b9b9-43f0-9971-1f0145059c14",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e9487ef9-d698-4548-b3b0-749b1f6e4dd8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"efb5de14-5a54-452b-9b2b-8df73691bedf",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -41,13 +42,14 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 2.0,
+    "length": 3.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d2f68854-aa2d-4d97-a235-ad6b3a200fcb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a0d42429-b9b9-43f0-9971-1f0145059c14","path":"sprites/s_PowerUp/s_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d8672360-d3a3-4eaa-a6c7-fcba4980a101","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e9487ef9-d698-4548-b3b0-749b1f6e4dd8","path":"sprites/s_PowerUp/s_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ba4ed471-2b5a-467b-8ce5-84d06445848c","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"efb5de14-5a54-452b-9b2b-8df73691bedf","path":"sprites/s_PowerUp/s_PowerUp.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,

@@ -40,7 +40,7 @@ function executeInfected() {
 	handlePlayerMovement(); //This is for the movement inputs
 	
 	//Shake the player's x location for the duration 
-	x += maxHSpeed*getRandomAmplitude(global.infectedTIME - stateDuration);
+	x += maxHSpeed*(global.pace/global.MINPACE)*getRandomAmplitude(global.infectedTIME - stateDuration);
 	
 	handlePlayerShooting(spdMult * global.pace, 90);
 	if (stateDuration <= 0) setState(playerStates.normal); //When duration is over return to normal
@@ -142,9 +142,9 @@ function initInfected() {
 	stateDuration = global.infectedTIME;
 	
 	//These vary how chaotic and powerful the shaking is for being infected
-	var amplitude = 8/4;
+	var amplitude = 3/4;
 	var phase = 90;
-	var freq = 20;
+	var freq = 17;
 	
 	//Clear the existing coefficients and randomly generate new ones
 	//This makes each infection use a different wave function

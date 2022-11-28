@@ -2,6 +2,17 @@
 // You can write your code in this editor
 
 randomize();
+factsFile = file_text_open_read("beefacts.json");
+facts = file_text_read_string(factsFile);
+file_text_close(factsFile);
+facts = json_parse(facts).BeeFacts;
+
+factsList = ds_list_create();
+
+for (var i = 0; i < array_length(facts); i++) {
+	ds_list_add(factsList, facts[i]);
+}
+
 
 //Debug related
 global.debug = false;
@@ -16,6 +27,11 @@ last5FPS = [60, 60, 60, 60, 60]
 global.FRAMERATE = 60;
 global.MAXPACE = 30;
 global.MINPACE  = 5;
+global.bckgrnd = 1;
+
+__factCD = global.FRAMERATE*10;
+factCD = __factCD;
+factPos = 0; 
 
 //Define the boundary the player object can move within
 global.HORIZONTAL_BUFFER = 34;
@@ -25,9 +41,9 @@ global.UPPER_BOUND = room_height - 2 * 256;
 //State vars
 pointsPerSec = 100
 global.gameState = 0;
-global.__BOSSSPAWNRATE = global.FRAMERATE * 60 * 2;
+global.__BOSSSPAWNRATE = global.FRAMERATE * 60 * .25;
 global.bossCD = global.__BOSSSPAWNRATE;
-paceSlope = (global.MAXPACE - global.MINPACE)/(pointsPerSec*60*30); // Reach max diff in 10 minutes
+paceSlope = (global.MAXPACE - global.MINPACE)/(pointsPerSec*60*10); // Reach max diff in 10 minutes
 
 //Global variables
 global.pace = global.MINPACE;
@@ -38,7 +54,7 @@ global.distance = 0;
 global.isPaused = false;
 global.gameOver = false;
 
-global.infectedTIME = global.FRAMERATE * 5; // Ten second infection at start;
+global.infectedTIME = global.FRAMERATE * 3; // Ten second infection at start;
 global.respawnTIME = global.FRAMERATE *1;
 global.invincibleTIME = global.FRAMERATE * 5;
 global.sprayingTIME = global.FRAMERATE * 3;
@@ -64,7 +80,8 @@ enum playerStates {
 
 enum powerUps {
 	shield,
-	rapid	
+	rapid,
+	life
 }
 
 //Resets the relevant variables to starta new game, and clears the gameRoom of all unimportant objects
@@ -74,6 +91,11 @@ function restartGame(){
 	global.score = 0;
 	global.distance = 0;
 	global.gameOver = false;
+	global.gameState = 0;
+	global.bossCD = global.__BOSSSPAWNRATE;
+	global.bckgrnd = 5;
+	//Ad stuff
+	global.numRevives = 0;
 
 	instance_destroy(Player, false);
 	instance_destroy(Flower, false);
@@ -150,6 +172,7 @@ instance_deactivate_object(myDebugButton2);
 
 function pauseGame() {
 	global.isPaused = true
+	layer_vspeed(layer_get_id("Background"), 0);
 	instance_activate_object(myRestartButton);
 	instance_activate_object(myDynamicButton);
 	instance_activate_object(myDebugButton1);
@@ -160,11 +183,34 @@ function pauseGame() {
 
 function unpauseGame() {
 	global.isPaused = false
+	layer_vspeed(layer_get_id("Background"), global.bckgrnd);
 	instance_deactivate_object(myRestartButton);
 	instance_deactivate_object(myDynamicButton);
 	instance_deactivate_object(myDebugButton1);
 	instance_deactivate_object(myDebugButton2);
 	audio_resume_sound(sound_gamemusic);
 	audio_resume_sound(sound_waspmusic);
+}
+
+
+function factFormat(index) {
+	var og = ds_list_find_value(factsList, index);
+	var threshold = 30;
+	var result = "";
+	var count = 1;
+	for (var i = 1; i <= string_length(og); i++) {
+		var curr = string_char_at(og, i);
+		if threshold - count <= 5 and curr == " " {
+			result += "\n"
+			count = 1
+		}
+		else result += curr;
+		if count % threshold == 0 {
+			result += "\n";
+			count = 1;
+		}
+		else count++;
+	}
+	return result;
 }
 

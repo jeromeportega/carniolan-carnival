@@ -165,6 +165,9 @@ switch(async_load[?"type"])
 		global.lives += count;
 		//Not gameover
 		global.gameOver = false;
+		
+		global.numRevives++;
+		global.lastAdTime = current_time;
 		break;
 
 }

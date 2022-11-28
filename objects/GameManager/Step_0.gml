@@ -7,13 +7,33 @@ if (global.isPaused) {
 		global.debugToggle1 = false;
 		global.debugToggle2 = false;
 	}
-	exit
+	
+	if factCD == 0 {
+		factPos++;
+		factCD = __factCD;
+		if factPos >= ds_list_size(factsList) {
+			factPos = 0;
+			ds_list_shuffle(factsList);
+		}
+	}
+	else{
+		factCD = max(0, factCD - 1);
+	}
+	
+	exit;
 }
 else if (global.lives <= 0) {
 	global.gameOver = true;
+	global.adRoll = random(1);
+	audio_stop_sound(sound_enemybullet_ouch);
+	audio_play_sound(sound_gameover, 2, 0);
+	//global.adRoll = 0; //For debug
 	pauseGame();
-	
+	exit;
 }
+
+global.bckgrnd = 5*global.pace/global.MAXPACE;
+layer_vspeed(layer_get_id("Background"), global.bckgrnd);
 //Tracking the gameDistance traveled as a means of trackign score and increasing difficulty
 global.distance += pointsPerSec/global.FRAMERATE;
 

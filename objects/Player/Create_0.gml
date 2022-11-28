@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 
-image_xscale = 2;
-image_yscale = 2;
+image_xscale = 4;
+image_yscale = 4;
 
 //Movement variables
 maxHSpeed = 10; //Max speed the player can move in normal state

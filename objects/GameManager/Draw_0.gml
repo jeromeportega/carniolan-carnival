@@ -17,10 +17,18 @@ if (global.debug) {
 	draw_text(x_align, 280 + y_offset, "PowerUpCD: " + string(powerUpCD/global.FRAMERATE));
 	draw_text(x_align, 320 + y_offset, "BossCD: " + string(global.bossCD/global.FRAMERATE));
 	draw_text(x_align, 360 + y_offset, "Room: " + string(room == Room1));
+	draw_text(x_align, 400 + y_offset, "RewardedLoaded: " + string(AdMob_RewardedVideo_IsLoaded()));
+	draw_text(x_align, 440 + y_offset, "LimiterTime: " + string(current_time - global.lastAdTime));
 }
 
 
 //Drawing lives counter
-draw_sprite_ext(s_Player, 0, 64, 64, 2, 2, 0, c_white, 1);
+draw_sprite_ext(s_Player, 0, 64, 64, 4, 4, 0, c_white, 1);
 draw_set_font(LivesFont)
 draw_text(96, 64, "  X  " + string(global.lives));
+
+if global.isPaused {
+	
+	draw_text(150, room_height/2 - 250, factFormat(factPos));
+	
+}

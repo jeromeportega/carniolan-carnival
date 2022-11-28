@@ -2,3 +2,6 @@
 // You can write your code in this editor
 
 unpause_speed = speed
+
+image_xscale = 3;
+image_yscale = 2;

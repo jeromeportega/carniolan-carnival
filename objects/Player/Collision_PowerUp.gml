@@ -10,6 +10,8 @@ else if (other.powerType == powerUps.rapid) {
 	setState(playerStates.rapidfire);
 	
 }
-
+else{
+	global.lives += 3;	
+}
 instance_destroy(other);
 

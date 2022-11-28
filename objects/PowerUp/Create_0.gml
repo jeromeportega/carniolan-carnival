@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 //Randomly select a type on create
-powerType = irandom_range(0,1); //Inclusive
+powerType = irandom_range(0,2); //Inclusive
 //Select the corresping sub-image to draw
 image_index = powerType;
 image_speed = 0; //Disable animation (If positive -> would cycle through all icons)
