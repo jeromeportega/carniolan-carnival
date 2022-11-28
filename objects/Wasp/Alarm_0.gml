@@ -7,8 +7,8 @@ if (global.isPaused) {
 
 
 // Triple spread shot
-var xShift =  x + image_xscale*dcos(image_angle)*128/2;
-var yShift = y - image_yscale*dsin(-45 + image_angle)*108;
+var xShift =  x + image_xscale*dcos(image_angle)*128/2 + image_xscale*dcos(90 - image_angle)*108;
+var yShift = y - image_yscale*dsin(image_angle)*128/2 - image_yscale*dsin(90 - image_angle)*108;
 var spread = 250;
 
 instance_create_layer(xShift, yShift, "Instances", EnemyBullet, {
