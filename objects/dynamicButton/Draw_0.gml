@@ -3,7 +3,7 @@
 
 
 if (global.gameOver) {
-	sprite_index = s_watch;
+	sprite_index = s_Watch;
 	
 }
 else {
@@ -11,4 +11,3 @@ else {
 }
 
 draw_self();
-

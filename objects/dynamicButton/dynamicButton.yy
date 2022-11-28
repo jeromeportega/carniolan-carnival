@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "dynamicButton",
-  "spriteId": {
-    "name": "s_Continue",
-    "path": "sprites/s_Continue/s_Continue.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
