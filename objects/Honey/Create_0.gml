@@ -9,4 +9,4 @@ dirBreak = irandom_range(1, 3);
 
 deletionBoundary = room_height + 6*256; 
 
-
+rotsign = irandom_range(0,1);
