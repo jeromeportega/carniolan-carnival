@@ -12,6 +12,7 @@ else if (other.powerType == powerUps.rapid) {
 }
 else{
 	global.lives += 3;	
+	audio_play_sound(sound_healthUp, 3, 0);
 }
 instance_destroy(other);
 
