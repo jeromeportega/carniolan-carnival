@@ -10,7 +10,8 @@ rotationSpeed = -1; //For rotatin the icon on screen
 vspeed = global.pace/1.25; //Falls a little slower than everything else
 
 unpause_speed = speed
-
-image_xscale = 2
-image_yscale = 2
+size = 2;
+if powerType = 2 {size = 3}
+image_xscale = size;
+image_yscale = size;
 

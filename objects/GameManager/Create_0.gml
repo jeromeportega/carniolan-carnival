@@ -41,9 +41,9 @@ global.UPPER_BOUND = room_height - 2 * 256;
 //State vars
 pointsPerSec = 100
 global.gameState = 0;
-global.__BOSSSPAWNRATE = global.FRAMERATE * 60 * .25;
+global.__BOSSSPAWNRATE = global.FRAMERATE * 60 * 1.5;
 global.bossCD = global.__BOSSSPAWNRATE;
-paceSlope = (global.MAXPACE - global.MINPACE)/(pointsPerSec*60*10); // Reach max diff in 10 minutes
+paceSlope = (global.MAXPACE - global.MINPACE)/(pointsPerSec*60*30); // Reach max diff in 10 minutes
 
 //Global variables
 global.pace = global.MINPACE;

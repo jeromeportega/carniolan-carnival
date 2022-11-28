@@ -24,8 +24,10 @@ if (global.debug) {
 
 //Drawing lives counter
 draw_sprite_ext(s_Player, 0, 64, 64, 4, 4, 0, c_white, 1);
-draw_set_font(LivesFont)
+draw_set_color(c_white);
+draw_set_font(LivesFont);
 draw_text(96, 64, "  X  " + string(global.lives));
+draw_text(room_width/2 - 96, 64, string(floor(global.distance) + 100*global.score))
 
 if global.isPaused {
 	
