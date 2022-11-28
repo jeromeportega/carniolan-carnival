@@ -39,6 +39,7 @@
     {"id":{"name":"sound_rapidfire","path":"sounds/sound_rapidfire/sound_rapidfire.yy",},"order":8,},
     {"id":{"name":"Room_AdMob","path":"rooms/Room_AdMob/Room_AdMob.yy",},"order":0,},
     {"id":{"name":"sound_hit_flower_or_boss","path":"sounds/sound_hit_flower_or_boss/sound_hit_flower_or_boss.yy",},"order":4,},
+    {"id":{"name":"s_TextBack2","path":"sprites/s_TextBack2/s_TextBack2.yy",},"order":22,},
     {"id":{"name":"testingDecrementer","path":"objects/testingDecrementer/testingDecrementer.yy",},"order":0,},
     {"id":{"name":"EnemyBullet","path":"objects/EnemyBullet/EnemyBullet.yy",},"order":6,},
     {"id":{"name":"s_Background","path":"sprites/s_Background/s_Background.yy",},"order":17,},

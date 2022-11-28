@@ -195,21 +195,30 @@ function unpauseGame() {
 
 function factFormat(index) {
 	var og = ds_list_find_value(factsList, index);
-	var threshold = 30;
+	var threshold = 36;
 	var result = "";
 	var count = 1;
+	var lastSpace = 0;
 	for (var i = 1; i <= string_length(og); i++) {
 		var curr = string_char_at(og, i);
+		if (curr == " ") lastSpace = i;
 		if threshold - count <= 5 and curr == " " {
 			result += "\n"
 			count = 1
 		}
-		else result += curr;
-		if count % threshold == 0 {
-			result += "\n";
+		else if count % threshold == 0 {
+			if (curr != " "){
+				result = string_copy(result, 1, string_length(result) - (i - lastSpace));
+				i = lastSpace;
+				result += "\n";
+			}
+			else result += "\n";
 			count = 1;
 		}
-		else count++;
+		else {
+			result += curr;
+			count++;
+		}
 	}
 	return result;
 }

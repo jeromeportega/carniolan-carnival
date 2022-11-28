@@ -30,7 +30,11 @@ draw_text(96, 64, "  X  " + string(global.lives));
 draw_text(room_width/2 - 96, 64, string(floor(global.distance) + 100*global.score))
 
 if global.isPaused {
-	
-	draw_text(150, room_height/2 - 250, factFormat(factPos));
+	var xOff = 256+96;
+	var yOff = 300;
+	draw_sprite(s_TextBack2,0, room_width/2, room_height/2 + yOff);
+	draw_set_color(c_black);
+	draw_text(room_width/2 - xOff, room_height/2 + yOff+32, factFormat(factPos));
+	draw_set_color(c_white);
 	
 }

@@ -26,6 +26,9 @@ if direction != 270 {
 	}
 }
 
+if (rotsign) image_angle +=1;
+else image_angle -= 1;
+
 
 if (x < 32) { //32 is half the width of sprite
 	x = 32
