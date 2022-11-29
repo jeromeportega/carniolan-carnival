@@ -7,6 +7,8 @@ audio_resume_sound(sound_gamemusic);
 audio_stop_sound(sound_waspmusic);
 global.bossCD = global.__BOSSSPAWNRATE
 
+global.lives++;
+
 spawnHoney(x,y, 64, 20);
 audio_play_sound(sound_waspdeath, 2, 0 );
 
