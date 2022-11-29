@@ -148,7 +148,7 @@ function handleFlowerSpawning() {
 
 function spawnBoss() {
 	var boss = instance_create_layer(room_width/2, room_height/8,"Instances", Wasp);
-	boss.enemy_health = 10 *  (global.pace/global.MINPACE);
+	boss.enemy_health = 20 *  (global.pace/global.MINPACE);
 }
 
 
