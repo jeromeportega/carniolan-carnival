@@ -3,7 +3,7 @@
 
 
 if (global.gameOver and AdMob_RewardedVideo_IsLoaded() and current_time - global.lastAdTime >= global.rewardedLimiter and global.adRoll <= power(.8, global.numRevives)*global.baseOfferChance) {
-	sprite_index = s_watch;
+	sprite_index = s_Watch;
 	draw_self();
 }
 else if global.gameOver {

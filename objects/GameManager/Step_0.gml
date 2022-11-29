@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if (global.lives > 20) global.lives = 20;
+
 if (global.isPaused) {
 	if global.debugToggle1 and global.debugToggle2 {
 		global.debug = !global.debug;

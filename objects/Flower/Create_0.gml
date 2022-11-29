@@ -4,7 +4,7 @@
 var szs = [.75, 1, 1.25];
 var pos = irandom_range(0, 2);
 size = szs[pos];
-hpValue = (1+pos)*round(1+(global.pace/global.MINPACE - 1)/4);//base*scal;
+hpValue = round((1+pos)*(1+(global.pace/global.MINPACE - 1)/3));//base*scal;
 deletionBoundary = room_height + 6*256;  //this number is six times the width of the sprite
 honeyChance = 0.8; //honeyChance and mit8Chance will be global variables
 miteChance = 0.1*(1 + global.pace/global.MAXPACE);

@@ -6,11 +6,27 @@ if (global.isPaused) {
 	exit
 }
 
-speed = global.pace*spdMult;
+speed = global.pace;//*spdMult;
 
 if (y >= deletionBoundary) instance_destroy(id, false);
 
+var xspeed = dcos(direction)*speed;
+var yspeed = -1*speed*dsin(direction);
 
+xspeed = sign(xspeed)*max(0, (abs(xspeed) - .1));
+yspeed = min(global.pace, (yspeed + .1));
+
+if (xspeed != 0) {
+	var dir = darctan(-yspeed/xspeed);
+	if (sign(xspeed) == -1) dir += 180;
+	direction = dir;
+	speed = sqrt(power(xspeed, 2) + power(yspeed, 2));
+} else {
+	direction = 270;
+	speed = global.pace;
+}
+
+/*
 if direction != 270 {
 	if direction >= 90 {
 		direction = min(270, direction + dirBreak);
@@ -26,6 +42,9 @@ if direction != 270 {
 	}
 }
 
+if (rotsign) image_angle +=1;
+else image_angle -= 1;
+*/
 
 if (x < 32) { //32 is half the width of sprite
 	x = 32
