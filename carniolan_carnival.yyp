@@ -31,6 +31,7 @@
     {"id":{"name":"PowerUp","path":"objects/PowerUp/PowerUp.yy",},"order":9,},
     {"id":{"name":"s_HummingBird","path":"sprites/s_HummingBird/s_HummingBird.yy",},"order":7,},
     {"id":{"name":"Obj_AdMob_Consent_Reset","path":"objects/Obj_AdMob_Consent_Reset/Obj_AdMob_Consent_Reset.yy",},"order":2,},
+    {"id":{"name":"sound_mitestouchplayer","path":"sounds/sound_mitestouchplayer/sound_mitestouchplayer.yy",},"order":11,},
     {"id":{"name":"s_Minus","path":"sprites/s_Minus/s_Minus.yy",},"order":10,},
     {"id":{"name":"sound_gamemusic","path":"sounds/sound_gamemusic/sound_gamemusic.yy",},"order":1,},
     {"id":{"name":"s_Bullet","path":"sprites/s_Bullet/s_Bullet.yy",},"order":3,},
