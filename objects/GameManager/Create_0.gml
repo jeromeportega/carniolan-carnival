@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 randomize();
-factsFile = file_text_open_read("beefacts.json");
-facts = file_text_read_string(factsFile);
+var factsFile = file_text_open_read("beefacts.json");
+var facts = file_text_read_string(factsFile);
 file_text_close(factsFile);
 facts = json_parse(facts).BeeFacts;
 
@@ -13,6 +13,13 @@ for (var i = 0; i < array_length(facts); i++) {
 	ds_list_add(factsList, facts[i]);
 }
 
+
+var scoreFile = file_text_open_read("highscore.json");
+var myScore = file_text_read_string(scoreFile);
+file_text_close(scoreFile);
+myScore = json_parse(myScore).highscore;
+global.highScore = -1;
+global.highScore = real(myScore);
 
 //Debug related
 global.debug = false;

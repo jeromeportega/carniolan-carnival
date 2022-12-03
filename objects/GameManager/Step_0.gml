@@ -30,6 +30,18 @@ else if (global.lives <= 0) {
 	audio_stop_sound(sound_enemybullet_ouch);
 	audio_play_sound(sound_gameover, 2, 0);
 	//global.adRoll = 0; //For debug
+	
+	
+	var newBest = floor(global.distance) + 100*global.score;
+	
+	if (newBest > global.highScore)
+	{
+		global.highScore = newBest;
+		var scoreFile = file_text_open_write("highscore.txt");
+		file_text_write_string(scoreFile, "{\"highscore\":" + string(global.highScore) + "}");
+		file_text_close(scoreFile);
+	}
+	
 	pauseGame();
 	exit;
 }
