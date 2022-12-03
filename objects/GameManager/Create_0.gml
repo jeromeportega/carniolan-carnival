@@ -39,7 +39,7 @@ global.LOWER_BOUND = room_height - 256;
 global.UPPER_BOUND = room_height - 2 * 256;
 
 //State vars
-pointsPerSec = 100
+pointsPerSec = 100;
 global.gameState = 0;
 global.__BOSSSPAWNRATE = global.FRAMERATE * 60 * 1.5;
 global.bossCD = global.__BOSSSPAWNRATE;

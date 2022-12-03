@@ -51,4 +51,12 @@ part_type_direction( particle_Player_Fly, 250, 290, 1, 1);
 part_type_color2(particle_Player_Fly, c_white, c_yellow);
 
 
+particle_Points = part_type_create();
 
+part_type_sprite(particle_Points, s_points, 0, 0 , 0);
+part_type_size(particle_Points, .9, 1, .1, 0);
+part_type_life(particle_Points, 30, 50);
+part_type_alpha3(particle_Points, 1, 0.6, 0);
+part_type_orientation( particle_Points, 0, 0, 0, 0, 0);
+part_type_speed( particle_Points, 0, 0, 0, 0);
+part_type_color2(particle_Points, c_yellow, c_white);
