@@ -92,7 +92,7 @@ function updateConsentStrings() {
 }
 
 
-AdMob_SetTestDeviceId();
+//AdMob_SetTestDeviceId();
 
 AdMob_Initialize();
 
