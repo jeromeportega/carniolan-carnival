@@ -27,14 +27,43 @@ draw_sprite_ext(s_Player, 0, 64, 64, 4, 4, 0, c_white, 1);
 draw_set_color(c_white);
 draw_set_font(LivesFont);
 draw_text(96, 64, "  X  " + string(global.lives));
-draw_text(room_width/2 - 96, 64, string(floor(global.distance) + 100*global.score))
+
+
+if(global.gameOver) {
+	var xalign = -98;
+	var yalign = -150;
+	draw_sprite(s_GameOver, 0, room_width/2 + xalign, room_height/2 + yalign);
+	draw_set_font(gameoverPointsFont);
+	draw_text(room_width/2 + xalign -16, room_height/2 + yalign, string(floor(global.distance) + 100*global.score))
+}
+else
+{
+	var xalign = -210;
+	var yalign = -200;
+	draw_set_font(LivesFont);
+	draw_text(room_width/2 - 96, 64, string(floor(global.distance) + 100*global.score));
+	
+	draw_set_font(gameoverPointsFont);
+	draw_set_color(c_black);
+	if (global.isPaused)
+	{
+		draw_sprite(s_Blank, 0, room_width/2, room_height/2 - 350)
+		draw_text(room_width/2 + xalign -16, room_height/2 + yalign - 120, "High Score: \n" + string(global.highScore));
+		
+	}
+	draw_set_color(c_white);
+}
 
 if global.isPaused {
 	var xOff = 256+96;
 	var yOff = 300;
+	draw_set_font(LivesFont);
 	draw_sprite(s_TextBack2,0, room_width/2, room_height/2 + yOff);
 	draw_set_color(c_black);
 	draw_text(room_width/2 - xOff, room_height/2 + yOff+32, factFormat(factPos));
 	draw_set_color(c_white);
+	
+
+	
 	
 }
