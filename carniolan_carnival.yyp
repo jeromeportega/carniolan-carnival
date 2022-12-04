@@ -49,6 +49,7 @@
     {"id":{"name":"s_points","path":"sprites/s_points/s_points.yy",},"order":24,},
     {"id":{"name":"testingDecrementer","path":"objects/testingDecrementer/testingDecrementer.yy",},"order":0,},
     {"id":{"name":"EnemyBullet","path":"objects/EnemyBullet/EnemyBullet.yy",},"order":6,},
+    {"id":{"name":"TitleManager","path":"objects/TitleManager/TitleManager.yy",},"order":3,},
     {"id":{"name":"s_Background","path":"sprites/s_Background/s_Background.yy",},"order":17,},
     {"id":{"name":"sound_invinicible","path":"sounds/sound_invinicible/sound_invinicible.yy",},"order":7,},
     {"id":{"name":"PlayerSupportFunctions","path":"scripts/PlayerSupportFunctions/PlayerSupportFunctions.yy",},"order":1,},
